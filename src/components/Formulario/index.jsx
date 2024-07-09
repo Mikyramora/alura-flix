@@ -1,11 +1,9 @@
+import styled from "styled-components"
+
 
 
 const Formulario = () => {
-    return <section>
-        <form>
-            <h1>NUEVO VIDEO</h1>
-        </form>
-    </section>
+    return 
 }
 
 export default Formulario

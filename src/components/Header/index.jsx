@@ -2,7 +2,7 @@ import styled from "styled-components"
 import ButtonContainer from "../ButtonContainer"
 
 const HeaderEstilizado = styled.header`
-    background: url(public/img/fondo-header.png) no-repeat center center;
+    background: url(/img/fondo-header.png) no-repeat center center;
     background-size: cover;
     padding: 20px 0;
     display: flex;
