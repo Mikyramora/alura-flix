@@ -31,16 +31,13 @@ const TituloFormulario = styled.h3`
     background-color: blue;
 `
 
-
-
-
-
 const Nuevo = () => {
     return <section>
         <ContainerFormulario>
             <TituloPrincipal>NUEVO VIDEO</TituloPrincipal>
             <Instrucciones>COMPLETE EL FORMULARIO PARA CREAR UNA NUEVA TARJETA DE VIDEO</Instrucciones>
             <TituloFormulario>Crear Tarjeta</TituloFormulario>
+            <Formulario/>
 
         </ContainerFormulario>
     </section>
