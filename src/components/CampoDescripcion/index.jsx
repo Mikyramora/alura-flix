@@ -25,6 +25,7 @@ const DescripcionUsuario = styled.textarea`
     padding: 15px;
     font-size: 20px;
     background-color: #173b5c;
+    color: aliceblue;
 `
 
 const CampoDescripcion = () => {

@@ -17,12 +17,12 @@ const Label = styled.label`
 const InteractuarTexto = styled.input`
     border: aliceblue;
     padding: 15px;
-    outline-color: black;
     height: 20px;
     width: 600px;
     border-radius: 10px;
     background-color: #143757;
     font-size: 20px;
+    color: aliceblue;
     
 `
 

@@ -22,6 +22,7 @@ const Select = styled.select`
     border-radius: 10px;
     background-color: #143757;
     font-size: 20px;
+    color: aliceblue;
 `
 
 const SeleccionarOpciones = () => {
