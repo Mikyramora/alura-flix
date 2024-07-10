@@ -15,7 +15,7 @@ const SaveStyled = styled.button`
     border-color: aliceblue;
     cursor: pointer;
 
-    :hover{
+    &:hover{
         color: aliceblue;
     }
 `

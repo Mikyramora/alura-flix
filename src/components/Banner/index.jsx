@@ -13,10 +13,6 @@ const FigureEstilizada = styled.figure`
   max-width: 100%;
 `
 
-const ContainerPrincipal = styled.section`
-  min-height: 280px;
-  max-width: 90%;
-`
 const ContainerBannerEstilizado = styled.div`
   height: 400px;
   width: 600px;
@@ -30,8 +26,9 @@ const CategoriaEstilizadaPrincipal = styled.h1`
   color: aliceblue;
   border-radius: 15px;
   font-weight: 900;
-  font-size: 50px;
-  padding: 8px 14px;
+  font-size: 48px;
+  padding: 8px;
+  text-align: center;
 `
 
 

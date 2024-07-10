@@ -1,3 +1,4 @@
+import { useState } from "react"
 import styled from "styled-components"
 
 const Frame = styled.div`
@@ -26,11 +27,18 @@ const InteractuarTexto = styled.input`
 `
 
 const CampoTexto = (props) => {
+
+    const manejarCambio = (e) => {
+        props.actualizarValor(e.target.value)
+    }
     return <Frame>
         <Label>{props.titulo}</Label>
         <InteractuarTexto 
-        placeholder={props.placeholder}
-        required/>
+            placeholder={props.placeholder}
+            required={props.required}
+            value= {props.valor}
+            onChange={manejarCambio}
+        />
     </Frame>
 }
 
