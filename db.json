@@ -1,52 +1,52 @@
 {
-    "imagenes": [
+    "videos": [
       {
         "id": "1",
-        "nombre": "Chocobo",
-        "precio": "$129",
-        "img": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/170864ba-51a6-4f0f-9e64-1fb59fcd3811/d5qdxlh-5d987ad3-5df0-467e-8fad-59a220754ece.png/v1/fill/w_800,h_626,q_80,strp/chocobo_gift__cross_stitch__by_snowymelon_d5qdxlh-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjI2IiwicGF0aCI6IlwvZlwvMTcwODY0YmEtNTFhNi00ZjBmLTllNjQtMWZiNTlmY2QzODExXC9kNXFkeGxoLTVkOTg3YWQzLTVkZjAtNDY3ZS04ZmFkLTU5YTIyMDc1NGVjZS5wbmciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.adk8P1prQGDwELRoyL-hXSAJlaieDUKhw6GRoXCb_ic"
+        "titulo": "BLACK and GREY MARCUS AURELIUS TATTOO",
+        "categoria": "REALISTA",
+        "imagen": "https://i.ytimg.com/an_webp/cMDIuqm7Ci4/mqdefault_6s.webp?du=3000&sqp=CPKJwLQG&rs=AOn4CLDZLr-iTyVql2t3-6j6K5Bir3Nhag",
+        "video": "https://www.youtube.com/embed/cMDIuqm7Ci4?si=iNF5_2J-KHjcDdTf",
+        "descripcion": "I got the opportunity to create a custom Marcus Aurelius piece. I really enjoyed doing this tattoo as it fits perfectly in my style work. I hope you enjoy the content, let me know what you think about this piece and what you'd like to see in the near future."
+      },
+      {
+        "id": "2",
+        "titulo": "Hyper-Realism Tattoos",
+        "categoria": "REALISTA",
+        "imagen": "https://i.ytimg.com/an_webp/zpQwy85Vd-M/mqdefault_6s.webp?du=3000&sqp=CM-0wLQG&rs=AOn4CLBHBtZgwTEbkqc4dZYz8oZ6TWgY1w",
+        "video": "https://www.youtube.com/embed/zpQwy85Vd-M?si=_rarOgLwhNjivV5h",
+        "descripcion": "When you see 7 colors in a photo, artists like Steve Butcher, Steve Wimmer, Yomico Moreno, and Rich Pineda see 70. With hyper-realism, there is nothing that can not be created."
       },
       {
         "id": "3",
-        "nombre": "D&D",
-        "precio": "$349",
-        "img": "https://i.etsystatic.com/9273087/r/il/cb9b9b/2854308196/il_570xN.2854308196_36qy.jpg"
+        "titulo": "Black and gray Spiritual tattoo",
+        "categoria": "DOTWORK",
+        "imagen": "https://i.ytimg.com/an_webp/Il1ETULgjnw/mqdefault_6s.webp?du=3000&sqp=CMyPwLQG&rs=AOn4CLDormZGQtyOM3c9znixAoQw5oSN1g",
+        "video": "https://www.youtube.com/embed/Il1ETULgjnw?si=0JXF83ZQiAPsqPx7",
+        "descripcion": "My client wanted a more conceptual tattoo of something that included birds, this is what I came up with! I'm really pleased with how it turned out. "
       },
       {
         "id": "4",
-        "nombre": "Well Shit",
-        "precio": "$199",
-        "img": "https://storage.ko-fi.com/cdn/useruploads/display/5eb6f8ff-e198-40af-9ff1-c3499d64acb6_img_5019.jpeg"
+        "titulo": "a TOTORO dotwork",
+        "categoria": "DOTWORK",
+        "imagen": "https://i.ytimg.com/an_webp/h_VQzu4DpC8/mqdefault_6s.webp?du=3000&sqp=CKu4wLQG&rs=AOn4CLCXDxnhBdzX10z1_kBFxdwyYbRpBw",
+        "video": "https://www.youtube.com/embed/h_VQzu4DpC8?si=sJkP8jxrgEdMKYum",
+        "descripcion": "We are big fans of the studio ghibli movies here at a studio!! here is kiri dotwork tattoo of Totoro from My Neighbor Totoro"
       },
       {
         "id": "5",
-        "nombre": "Para Dos",
-        "precio": "$149",
-        "img": "https://i.pinimg.com/736x/d4/e1/52/d4e1529828b244fb28140ec06c80b970.jpg"
+        "titulo": "The Japanese Tattoo Duo: Taki & Horitomo",
+        "categoria": "JAPONÉS",
+        "imagen": "https://i.ytimg.com/vi/WlxRkrGiCBg/hqdefault_32866.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByzpyx6C6AjQMczOcc5K974t6O8Q",
+        "video": "https://www.youtube.com/embed/WlxRkrGiCBg?si=550QHSPWW6HLWnm_",
+        "descripcion": "Taki and Horitomo are the dynamic duo of Japanese style tattooing in the United States. In addition to tattooing, they also document the art form through museum shows and books."
       },
       {
         "id": "6",
-        "nombre": "Game On",
-        "precio": "$129",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRon4oJ_KtnMN6dE3sDpU7np6pMwac6X0beNQ&s"
-      },
-      {
-        "id": "7",
-        "nombre": "Lives",
-        "precio": "$129",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzyWJXsss7tMOPDLV28jbCmpUinvhQG7t7JQ&s"
-      },
-      {
-        "id": "8",
-        "nombre": "Pause",
-        "precio": "$269",
-        "img": "https://i.pinimg.com/736x/d4/e1/52/d4e1529828b244fb28140ec06c80b970.jpg"
-      },
-      {
-        "id": "9",
-        "nombre": "Sorpresa",
-        "precio": "$129",
-        "img": "https://i.pinimg.com/474x/84/f7/bf/84f7bfb531f4af545bbd6866c2fc0002.jpg"
+        "titulo": "Japanese tattoo in full colour",
+        "categoria": "JAPONÉS",
+        "imagen": "https://i.ytimg.com/an_webp/RG_3Kp6Fow8/mqdefault_6s.webp?du=3000&sqp=CIKUwLQG&rs=AOn4CLC6d33Oe64JtLrnv9UmQajsJy7MsQ",
+        "video": "https://www.youtube.com/embed/RG_3Kp6Fow8?si=V83H_kODUVtc6tbq",
+        "descripcion": "Bloodline Tattoo has established itself as an innovative leader within the tattoo industry, with a selection of handpicked, award winning artists sourced across all of Aisa we cover every style of Tattoo. Our work is completed with both Machine and Traditional Bamboo application in the premium class and highest quality design. Our stable of artists include multiple award winners across all categories on a global stage which is shown in the unrivalled tattoo quality from Bloodline."
       }
     ]
   }

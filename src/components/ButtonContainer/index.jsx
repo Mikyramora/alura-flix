@@ -10,38 +10,40 @@ const ContainerStyled = styled.div`
 `
 
 const ButtonHome = styled.button`
-    background-color: aliceblue;
+    background-color: #190b28;
     width: 200px;
     height: 55px;
-    color: #46b1f8;
+    color: aliceblue;
     padding: 10px;
     font-size: 20px;
     font-weight: 900;
     line-height: 24px;
-    border: 5px solid #46b1f8;
     border-radius: 15px;
+    border-color: darkblue;
+    box-shadow: 0px 0px 20px 10px darkblue;
     cursor: pointer;
 
     &:hover {
-        background-color: #f7e8f5;
+        background-color: darkblue;
     }
 `
 
 const ButtonNuevo = styled.button`
-    background-color: aliceblue;
+    background-color: #190b28;
     width: 200px;
     height: 55px;
-    color: #46b1f8;
+    color: aliceblue;
     padding: 10px;
     font-size: 20px;
     font-weight: 900;
     line-height: 24px;
-    border: 5px solid #46b1f8;
     border-radius: 15px;
+    border-color: darkblue;
+    box-shadow: 0px 0px 20px 10px darkblue;
     cursor: pointer;
 
     &:hover {
-        background-color: #f7e8f5;
+        background-color: darkblue;
     }
 `
 
