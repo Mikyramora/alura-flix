@@ -14,13 +14,13 @@ const FigureEstilizada = styled.figure`
 `
 
 const ContainerBannerEstilizado = styled.div`
-  height: 400px;
-  width: 600px;
-  margin: 50px 0 0 150px;
+  height: 430px;
+  width: 800px;
+  margin: 50px 0 10px 150px;
 `
 
 const CategoriaEstilizadaPrincipal = styled.h1`
-  width: 265px;
+  width: 270px;
   height: 52px;
   background: #6BD1FF;
   color: aliceblue;
@@ -37,15 +37,17 @@ const TituloEstilizado = styled.h2`
   font-size: 40px;
   line-height: 48px;
   color: #FFFFFF;
-  max-width: 300px;
+  max-width: 700px;
+  overflow: hidden;
 `
 
 const ParrafoEstilizado= styled.p`
   width: 800px;
-  height: 100px;
+  max-height: 300px;
   font-size: 25px;
   line-height: 41px;
   color: aliceblue;
+  overflow-x: hidden;
 `
 
 const IframeEstilizado= styled.iframe`

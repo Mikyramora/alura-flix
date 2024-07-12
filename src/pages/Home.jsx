@@ -1,5 +1,6 @@
 import Banner from "../components/Banner"
 import CategoriaVideos from "../components/CategoriaVideos"
+import ModalEditar from "../components/ModalEditar"
 
 
 const Home = () => {
