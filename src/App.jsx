@@ -6,8 +6,12 @@ import Page404 from "./pages/Page404"
 import styled from "styled-components"
 import GlobalStyles from "./components/Globalstyles";
 
+<<<<<<< HEAD
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import {AluraFlixProvider} from "./contex/AluraFlixContext.jsx";
+=======
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+>>>>>>> 5f16ac30fbae2ea871662c03a858275ebf8ea585
 
 
 const FondoGradiente = styled.div`
@@ -21,6 +25,7 @@ const FondoGradiente = styled.div`
 
 function App() {
 
+<<<<<<< HEAD
   return (
       <AluraFlixProvider>
         <Router>
@@ -37,6 +42,22 @@ function App() {
         </Router>
       </AluraFlixProvider>
   );
+=======
+    return (
+        <Router>
+            <FondoGradiente>
+                <GlobalStyles/>
+                    <Header/>
+                    <Routes>
+                        <Route path='/' element= {<Home/>}/>
+                        <Route path='/nuevo' element= {<Nuevo/>}/>
+                        <Route path='*' element= {<Page404/>}/>
+                    </Routes>
+                    <Footer/>
+            </FondoGradiente>
+        </Router>
+    );
+>>>>>>> 5f16ac30fbae2ea871662c03a858275ebf8ea585
 }
 
 export default App;

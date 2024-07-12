@@ -1,6 +1,9 @@
 import styled from "styled-components"
+<<<<<<< HEAD
 import {useAluraFlixContext} from "../../contex/AluraFlixContext.jsx";
 import {useEffect} from "react";
+=======
+>>>>>>> 5f16ac30fbae2ea871662c03a858275ebf8ea585
 
 
 const Frame = styled.div`
@@ -28,6 +31,7 @@ const Select = styled.select`
 `
 
 const SeleccionarOpciones = () => {
+<<<<<<< HEAD
   const {findAllCategories, categories} = useAluraFlixContext()
 
   useEffect(() => {
@@ -44,6 +48,23 @@ const SeleccionarOpciones = () => {
     </Select>
 
   </Frame>
+=======
+
+
+    const estilos = [
+        "Realista",
+        "Dotwork",
+        "Japonés"
+    ]
+
+    return <Frame>
+        <Label>Categorías</Label>
+        <Select>
+            {estilos.map ((estilo, index) => <option key={index}>{estilo}</option>)}
+        </Select>
+        
+    </Frame>
+>>>>>>> 5f16ac30fbae2ea871662c03a858275ebf8ea585
 }
 
 export default SeleccionarOpciones

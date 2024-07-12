@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "videos": [
     {
       "id": "1",
@@ -64,3 +65,56 @@
     }
   ]
 }
+=======
+    "videos": [
+      {
+        "id": "1",
+        "titulo": "BLACK and GREY MARCUS AURELIUS TATTOO",
+        "categoria": "REALISTA",
+        "imagen": "https://i.ytimg.com/an_webp/cMDIuqm7Ci4/mqdefault_6s.webp?du=3000&sqp=CPKJwLQG&rs=AOn4CLDZLr-iTyVql2t3-6j6K5Bir3Nhag",
+        "video": "https://www.youtube.com/embed/cMDIuqm7Ci4?si=iNF5_2J-KHjcDdTf",
+        "descripcion": "I got the opportunity to create a custom Marcus Aurelius piece. I really enjoyed doing this tattoo as it fits perfectly in my style work. I hope you enjoy the content, let me know what you think about this piece and what you'd like to see in the near future."
+      },
+      {
+        "id": "2",
+        "titulo": "Hyper-Realism Tattoos",
+        "categoria": "REALISTA",
+        "imagen": "https://i.ytimg.com/an_webp/zpQwy85Vd-M/mqdefault_6s.webp?du=3000&sqp=CM-0wLQG&rs=AOn4CLBHBtZgwTEbkqc4dZYz8oZ6TWgY1w",
+        "video": "https://www.youtube.com/embed/zpQwy85Vd-M?si=_rarOgLwhNjivV5h",
+        "descripcion": "When you see 7 colors in a photo, artists like Steve Butcher, Steve Wimmer, Yomico Moreno, and Rich Pineda see 70. With hyper-realism, there is nothing that can not be created."
+      },
+      {
+        "id": "3",
+        "titulo": "Black and gray Spiritual tattoo",
+        "categoria": "DOTWORK",
+        "imagen": "https://i.ytimg.com/an_webp/Il1ETULgjnw/mqdefault_6s.webp?du=3000&sqp=CMyPwLQG&rs=AOn4CLDormZGQtyOM3c9znixAoQw5oSN1g",
+        "video": "https://www.youtube.com/embed/Il1ETULgjnw?si=0JXF83ZQiAPsqPx7",
+        "descripcion": "My client wanted a more conceptual tattoo of something that included birds, this is what I came up with! I'm really pleased with how it turned out. "
+      },
+      {
+        "id": "4",
+        "titulo": "a TOTORO dotwork",
+        "categoria": "DOTWORK",
+        "imagen": "https://i.ytimg.com/an_webp/h_VQzu4DpC8/mqdefault_6s.webp?du=3000&sqp=CKu4wLQG&rs=AOn4CLCXDxnhBdzX10z1_kBFxdwyYbRpBw",
+        "video": "https://www.youtube.com/embed/h_VQzu4DpC8?si=sJkP8jxrgEdMKYum",
+        "descripcion": "We are big fans of the studio ghibli movies here at a studio!! here is kiri dotwork tattoo of Totoro from My Neighbor Totoro"
+      },
+      {
+        "id": "5",
+        "titulo": "The Japanese Tattoo Duo: Taki & Horitomo",
+        "categoria": "JAPONÉS",
+        "imagen": "https://i.ytimg.com/vi/WlxRkrGiCBg/hqdefault_32866.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByzpyx6C6AjQMczOcc5K974t6O8Q",
+        "video": "https://www.youtube.com/embed/WlxRkrGiCBg?si=550QHSPWW6HLWnm_",
+        "descripcion": "Taki and Horitomo are the dynamic duo of Japanese style tattooing in the United States. In addition to tattooing, they also document the art form through museum shows and books."
+      },
+      {
+        "id": "6",
+        "titulo": "Japanese tattoo in full colour",
+        "categoria": "JAPONÉS",
+        "imagen": "https://i.ytimg.com/an_webp/RG_3Kp6Fow8/mqdefault_6s.webp?du=3000&sqp=CIKUwLQG&rs=AOn4CLC6d33Oe64JtLrnv9UmQajsJy7MsQ",
+        "video": "https://www.youtube.com/embed/RG_3Kp6Fow8?si=V83H_kODUVtc6tbq",
+        "descripcion": "Bloodline Tattoo has established itself as an innovative leader within the tattoo industry, with a selection of handpicked, award winning artists sourced across all of Aisa we cover every style of Tattoo. Our work is completed with both Machine and Traditional Bamboo application in the premium class and highest quality design. Our stable of artists include multiple award winners across all categories on a global stage which is shown in the unrivalled tattoo quality from Bloodline."
+      }
+    ]
+  }
+>>>>>>> 5f16ac30fbae2ea871662c03a858275ebf8ea585

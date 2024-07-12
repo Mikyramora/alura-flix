@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import {styled} from "styled-components";
 import BotonesCategoria from "../BotonesCategoria";
 import {useAluraFlixContext} from "../../contex/AluraFlixContext.jsx";
+=======
+import { styled } from "styled-components";
+import BotonesCategoria from "../BotonesCategoria";
+>>>>>>> 5f16ac30fbae2ea871662c03a858275ebf8ea585
 
 const FigureEstilizada = styled.figure`
     flex-grow: 1;
@@ -13,6 +18,7 @@ const FigureEstilizada = styled.figure`
 `
 
 const CategoriaEstilizada = styled.h1`
+<<<<<<< HEAD
     width: 265px;
     height: 33px;
     text-align: center;
@@ -33,6 +39,28 @@ const ContainerVideosEstilizado = styled.div`
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #4391b4 #6BD1FF;
+=======
+      width: 265px;
+      height: 33px;
+      text-align: center;
+      background: #6BD1FF;
+      color: aliceblue;
+      border-radius: 15px;
+      font-weight: 900;
+      font-size: 30px;
+      padding: 5px;
+`
+
+const ContainerVideosEstilizado = styled.div`
+      height: 305px;
+      width: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #4391b4  #6BD1FF;
+>>>>>>> 5f16ac30fbae2ea871662c03a858275ebf8ea585
 `
 
 const CardCategoria = styled.div`
@@ -42,6 +70,7 @@ const CardCategoria = styled.div`
     margin-right: 50px;
 `
 
+<<<<<<< HEAD
 const ImgEstilizado = styled.img`
     width: 400px;
     height: 230px;
@@ -72,6 +101,69 @@ const CategoriaVideos = ({videoList, categoryName}) => {
         </ContainerVideosEstilizado>
       </FigureEstilizada>
   );
+=======
+const IframeEstilizado = styled.iframe`
+    width: 400px;
+    height: 230px;
+`
+
+const CategoriaVideos = () => {
+    return (
+        <FigureEstilizada>
+            <CategoriaEstilizada>REALISTA</CategoriaEstilizada>
+            <ContainerVideosEstilizado>
+                <CardCategoria>
+                    <IframeEstilizado
+                        src="https://www.youtube.com/embed/xoIwB_rAjJ8?si=fhAKTbNVuJbLVNis"
+                        title="YouTube video player" frameBorder="0" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></IframeEstilizado>
+                        <BotonesCategoria/>
+                </CardCategoria>
+                <CardCategoria>
+                    <IframeEstilizado
+                        src="https://www.youtube.com/embed/xoIwB_rAjJ8?si=fhAKTbNVuJbLVNis"
+                        title="YouTube video player" frameBorder="0" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></IframeEstilizado>
+                        <BotonesCategoria/>
+                </CardCategoria>
+                <CardCategoria>
+                    <IframeEstilizado
+                        src="https://www.youtube.com/embed/xoIwB_rAjJ8?si=fhAKTbNVuJbLVNis"
+                        title="YouTube video player" frameBorder="0" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></IframeEstilizado>
+                        <BotonesCategoria/>
+                </CardCategoria>
+                <CardCategoria>
+                    <IframeEstilizado
+                        src="https://www.youtube.com/embed/xoIwB_rAjJ8?si=fhAKTbNVuJbLVNis"
+                        title="YouTube video player" frameBorder="0" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></IframeEstilizado>
+                        <BotonesCategoria/>
+                </CardCategoria>
+                <CardCategoria>
+                    <IframeEstilizado
+                        src="https://www.youtube.com/embed/xoIwB_rAjJ8?si=fhAKTbNVuJbLVNis"
+                        title="YouTube video player" frameBorder="0" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></IframeEstilizado>
+                        <BotonesCategoria/>
+                </CardCategoria>
+                <CardCategoria>
+                    <IframeEstilizado
+                        src="https://www.youtube.com/embed/xoIwB_rAjJ8?si=fhAKTbNVuJbLVNis"
+                        title="YouTube video player" frameBorder="0" allow="accelerometer; 
+                        autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></IframeEstilizado>
+                        <BotonesCategoria/>
+                </CardCategoria>
+            </ContainerVideosEstilizado>
+        </FigureEstilizada>
+    );
+>>>>>>> 5f16ac30fbae2ea871662c03a858275ebf8ea585
 };
 
 
