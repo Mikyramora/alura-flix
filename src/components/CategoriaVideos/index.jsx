@@ -43,7 +43,7 @@ const CardCategoria = styled.div`
 `
 
 const ImgEstilizado = styled.img`
-    width: 400px;
+    width: 399px;
     height: 230px;
     border: 0;
 `

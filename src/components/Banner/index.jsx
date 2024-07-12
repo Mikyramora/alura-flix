@@ -36,27 +36,29 @@ const CategoriaEstilizadaPrincipal = styled.h1`
 const TituloEstilizado = styled.h2`
     font-weight: 400;
     font-size: 40px;
-    line-height: 48px;
     color: #FFFFFF;
     max-width: 700px;
-    overflow: hidden;
 `
 
-// TODO: validate what happen if we have a too long description
 const ParrafoEstilizado = styled.p`
-    width: 800px;
-    max-height: 300px;
+    width: 820px;
+    max-height: 200px;
     font-size: 25px;
-    line-height: 41px;
+    line-height: 35px;
     color: aliceblue;
-    overflow-x: hidden;
+    overflow-x: auto ;
+    scrollbar-width: thin;
+    scrollbar-color: #4391b4 #6BD1FF;
 `
+
 
 const IframeEstilizado = styled.iframe`
     margin-right: 200px;
     border-radius: 15px;
     box-shadow: 5px 5px 10px 3px darkblue;
     border: 0;
+    width: 500px; 
+    height: 350px; 
 `
 
 const Banner = () => {
@@ -73,11 +75,11 @@ const Banner = () => {
           <TituloEstilizado>{titulo}</TituloEstilizado>
           <ParrafoEstilizado>{descripcion}</ParrafoEstilizado>
         </ContainerBannerEstilizado>
-        <IframeEstilizado width="470" height="320"
-                          src={videoURL}
-                          allow="accelerometer;
-      autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
+        <IframeEstilizado
+                        src={videoURL}
+                        allow="accelerometer;autoplay; clipboard-write;
+                        encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen/>
       </FigureEstilizada>
   );
 };

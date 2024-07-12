@@ -2,7 +2,7 @@ import styled from "styled-components"
 import {useAluraFlixContext} from "../../contex/AluraFlixContext.jsx";
 
 const BotonesCategoriaStyled = styled.div`
-    width: 380px;
+    width: 400px;
     height: 33px;
     display: flex;
     flex-direction: row;
