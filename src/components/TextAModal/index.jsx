@@ -28,11 +28,11 @@ const DescripcionUsuario = styled.textarea`
     color: aliceblue;
 `
 
-const TextAModal = () => {
-    return<Frame>
-        <Label>Descripción</Label>
-        <DescripcionUsuario placeholder="¿De qué se trata éste video?" required/>
-    </Frame>
+const TextAModal = (props) => {
+  return <Frame>
+    <Label>Descripción</Label>
+    <DescripcionUsuario {...props}/>
+  </Frame>
 }
 
 export default TextAModal

@@ -51,16 +51,22 @@
   ],
   "categorias": [
     {
-      "id": 1,
-      "description": "REALISTA"
+      "id": "1",
+      "description": "REALISTA",
+      "background": "#6BD1FF",
+      "scrollbarColor": "#4391b4"
     },
     {
-      "id": 2,
-      "description": "DOTWORK"
+      "id": "2",
+      "description": "DOTWORK",
+      "background": "#00C86F",
+      "scrollbarColor": "#009b5b"
     },
     {
-      "id": 3,
-      "description": "JAPONÉS"
+      "id": "3",
+      "description": "JAPONÉS",
+      "background": "#FFBA05",
+      "scrollbarColor": "#d19b04"
     }
   ]
 }

@@ -1,7 +1,6 @@
 import {styled} from "styled-components";
 import BotonesCategoria from "../BotonesCategoria";
 import {useAluraFlixContext} from "../../contex/AluraFlixContext.jsx";
-import ModalEditar from "../ModalEditar/index.jsx";
 
 const FigureEstilizada = styled.figure`
     flex-grow: 1;
@@ -17,7 +16,6 @@ const CategoriaEstilizada = styled.h1`
     width: 265px;
     height: 33px;
     text-align: center;
-    background: #6BD1FF;
     color: aliceblue;
     border-radius: 15px;
     font-weight: 900;
@@ -33,7 +31,6 @@ const ContainerVideosEstilizado = styled.div`
     flex-direction: row;
     overflow-y: auto;
     scrollbar-width: thin;
-    scrollbar-color: #4391b4 #6BD1FF;
 `
 
 const CardCategoria = styled.div`
@@ -49,14 +46,13 @@ const ImgEstilizado = styled.img`
     border: 0;
 `
 
-const CategoriaVideos = ({videoList, categoryName}) => {
+const CategoriaVideos = ({videoList, categoryName, background, scrollbarColor}) => {
   const {showIframeVideo} = useAluraFlixContext()
-
 
   return (
       <FigureEstilizada>
-        <CategoriaEstilizada>{categoryName}</CategoriaEstilizada>
-        <ContainerVideosEstilizado>
+        <CategoriaEstilizada style={{background: `${background}`}}>{categoryName}</CategoriaEstilizada>
+        <ContainerVideosEstilizado style={{scrollbarColor: `${scrollbarColor} ${background}`}}>
           {videoList.map((video) => (
               <CardCategoria key={video.id}>
                 <ImgEstilizado
@@ -71,7 +67,7 @@ const CategoriaVideos = ({videoList, categoryName}) => {
               </CardCategoria>
           ))}
         </ContainerVideosEstilizado>
-       
+
       </FigureEstilizada>
   );
 };

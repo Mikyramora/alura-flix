@@ -28,7 +28,7 @@ const ImagenesBotonesCategoriaStyled = styled.img`
 
 const BotonesCategoria = ({id}) => {
 
-  const {deleteVideo} = useAluraFlixContext()
+  const {deleteVideo, showEditForm} = useAluraFlixContext()
 
   return (
       <BotonesCategoriaStyled>
@@ -38,7 +38,9 @@ const BotonesCategoria = ({id}) => {
           <ImagenesBotonesCategoriaStyled src="/img/Borrar.png"/>
           BORRAR
         </BotonStyled>
-        <BotonStyled>
+        <BotonStyled
+            onClick={() => showEditForm(id)}
+        >
           <ImagenesBotonesCategoriaStyled src="/img/Edit.png"/>
           EDITAR
         </BotonStyled>

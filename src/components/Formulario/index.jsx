@@ -1,10 +1,11 @@
-import {useState} from "react"
 import styled from "styled-components"
 import CampoTexto from "../CampoTexto"
 import SeleccionarOpciones from "../SeleccionarOpciones"
 import CampoDescripcion from "../CampoDescripcion"
 import SaveButton from "../BotonGuardar"
 import CleanButton from "../BotonLimpiar"
+import {useAluraFlixContext} from "../../contex/AluraFlixContext.jsx";
+import {useState} from "react";
 
 const FilasFormulario = styled.figure`
     display: flex;
@@ -23,53 +24,97 @@ const ButtonContainer = styled.div`
 
 const Formulario = () => {
 
-  const [titulo, actualizarTitulo] = useState("")
-  const [imagen, actualizarImagen] = useState("")
-  const [video, actualizarVideo] = useState("")
+  const {video, onSubmitForm, onChangeInput, clean} = useAluraFlixContext()
 
-  const manejarEnvio = (e) => {
-    e.preventDefault()
-    console.log("Manejar el envío")
-    let datosEnviar = {
-      titulo: titulo,
-      imagen: imagen,
-      video: video
+  const [formValuesCheck, setFormValuesCheck] = useState({
+    titulo: false,
+    categoria: false,
+    imagenURL: false,
+    videoURL: false,
+    descripcion: false
+  })
+
+  const onSubmit = (event) => {
+    event.preventDefault()
+    let isFormValid = true
+    for (const key in video) {
+      if (!video[key]) {
+        setFormValuesCheck((prevState) => ({
+          ...prevState,
+          [key]: true
+        }))
+        isFormValid = false
+      }
     }
-    console.log(datosEnviar);
+
+    if (isFormValid) {
+      onSubmitForm()
+    }
   }
 
+  const onChangeForm = (event) => {
+    onChangeInput(event)
+    setFormValuesCheck((prevState) => ({
+      ...prevState,
+      [event.target.name]: false
+    }))
+  }
+
+
   return (
-      <form onSubmit={manejarEnvio}>
+      <form onSubmit={onSubmit}>
         <div>
           <FilasFormulario>
             <CampoTexto
                 titulo="Título"
+                name="titulo"
+                value={video.titulo}
+                onChange={onChangeForm}
                 placeholder="Ingrese el título"
-                required
-                valor={titulo}
-                actualizarValor={actualizarTitulo}/>
-            <SeleccionarOpciones/>
+                hasError={formValuesCheck.titulo}
+            />
+            <SeleccionarOpciones
+                name="categoria"
+                value={video.categoria}
+                onChange={onChangeForm}
+                hasError={formValuesCheck.categoria}
+                defaultValue=""
+            />
           </FilasFormulario>
           <FilasFormulario>
             <CampoTexto
                 titulo="Imagen"
                 placeholder="Ingrese el enlace de la imagen"
-                required
-                valor={imagen}
-                actualizarValor={actualizarImagen}/>
+                name="imagenURL"
+                value={video.imagenURL}
+                onChange={onChangeForm}
+                hasError={formValuesCheck.imagenURL}
+            />
+
             <CampoTexto
                 titulo="Video"
                 placeholder="Ingrese el enlace del video"
-                required
-                valor={video}
-                actualizarValor={actualizarVideo}/>
+                name="videoURL"
+                value={video.videoURL}
+                onChange={onChangeForm}
+                hasError={formValuesCheck.videoURL}
+            />
           </FilasFormulario>
-          <CampoDescripcion></CampoDescripcion>
+          <CampoDescripcion
+              name="descripcion"
+              value={video.descripcion}
+              onChange={onChangeForm}
+              placeholder="¿De qué se trata éste video?"
+              hasError={formValuesCheck.descripcion}
+          />
           <ButtonContainer>
-            <SaveButton type="submit" texto="GUARDAR"/>
-            <CleanButton type="reset" texto="LIMPIAR"/>
+            <SaveButton texto="GUARDAR"/>
+            <CleanButton
+                onClick={() => {
+                  clean()
+                }}
+                texto="LIMPIAR"/>
           </ButtonContainer>
-
         </div>
       </form>
   )

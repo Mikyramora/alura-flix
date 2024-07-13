@@ -1,4 +1,4 @@
-import { useState } from "react"
+import {useState} from "react"
 import styled from "styled-components"
 
 const Frame = styled.div`
@@ -23,23 +23,16 @@ const InteractuarTexto = styled.input`
     background-color: #143757;
     font-size: 20px;
     color: aliceblue;
-    
+
 `
 
-const CampoTextoModal = (props) => {
-
-    const manejarCambio = (e) => {
-        props.actualizarValor(e.target.value)
-    }
-    return <Frame>
-        <Label>{props.titulo}</Label>
-        <InteractuarTexto 
-            placeholder={props.placeholder}
-            required={props.required}
-            value= {props.valor}
-            onChange={manejarCambio}
-        />
-    </Frame>
+const CampoTextoModal = ({titulo, ...props}) => {
+  return <Frame>
+    <Label>{titulo}</Label>
+    <InteractuarTexto
+        {...props}
+    />
+  </Frame>
 }
 
 export default CampoTextoModal

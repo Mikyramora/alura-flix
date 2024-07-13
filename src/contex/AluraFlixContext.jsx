@@ -15,6 +15,15 @@ export const useAluraFlixContext = () => {
 
 export const AluraFlixProvider = ({children}) => {
 
+  const initialVideoState = {
+    titulo: '',
+    categoria: '',
+    imagenURL: '',
+    videoURL: '',
+    descripcion: ''
+  }
+  const [video, setVideo] = useState(initialVideoState)
+
   const [videosByCategory, setVideosByCategory] = useState([])
 
   const initialMetadataState = {
@@ -25,7 +34,9 @@ export const AluraFlixProvider = ({children}) => {
   }
   const [metadata, setMetadata] = useState(initialMetadataState)
 
-  const [categories, setCategories] = useState([""])
+  const [categories, setCategories] = useState([{id: 0, titulo: "Cargando..."}])
+
+  const [toggleModal, setToggleModal] = useState(false)
 
   const findAllCategories = async () => {
     const {data} = await axios.get(URLs.category)
@@ -36,19 +47,37 @@ export const AluraFlixProvider = ({children}) => {
   }
 
   const findVideosByCategory = async () => {
+    const {data: categories} = await axios.get(URLs.category)
+    if (!categories) {
+      throw Error("Can't not load data :: findVideosByCategory")
+    }
+
     const {data} = await axios.get(URLs.video)
     if (!data) {
       throw Error("Can't not load data :: findVideosByCategory")
     }
 
     const res = data.reduce((acc, video) => {
-      const {categoria} = video;
-      if (!acc[categoria]) {
-        acc[categoria] = {category: categoria, videos: []};
+      const {
+        id,
+        description,
+        background,
+        scrollbarColor
+      } = categories.find(category => category.description === video.categoria)
+
+      if (!acc[description]) {
+        acc[description] = {
+          id,
+          category: description,
+          background,
+          scrollbarColor,
+          videos: []
+        }
       }
-      acc[categoria].videos.push(video);
-      return acc;
-    }, {});
+      acc[description].videos.push(video)
+      return acc
+    }, {})
+
     setVideosByCategory(Object.values(res))
   }
 
@@ -68,18 +97,69 @@ export const AluraFlixProvider = ({children}) => {
       alert("Hubo un error al intentar borrar el video")
     }
     alert("El video se elimino exitosamente")
+    await findVideosByCategory()
+  }
+
+  const showEditForm = async (id) => {
+    const {data} = await axios.get(`${URLs.video}/${id}`)
+    if (!data) {
+      throw Error("Can't not load data :: loadVideo")
+    }
+    setVideo(data)
+    setToggleModal(true)
+  }
+
+  const onChangeInput = (e) => {
+    setVideo({
+      ...video, [e.target.name]: e.target.value
+    })
+  }
+
+  const onSubmitForm = async (isEdit = false) => {
+    if (isEdit) {
+      const {status} = await axios.put(`${URLs.video}/${video.id}`, video)
+      if (status !== 200) {
+        alert("Hubo un error al intentar editar el video")
+      }
+      alert("El video se edito exitosamente")
+      setToggleModal(false)
+    } else {
+      const {status} = await axios.post(URLs.video, video)
+      if (status !== 201) {
+        alert("Hubo un error al intentar agregar el video")
+      }
+      alert("El video se agrego exitosamente")
+    }
+    setVideo(initialVideoState)
+    await findVideosByCategory()
+  }
+  const clean = () => {
+    setVideo(initialVideoState)
+  }
+
+  const closeModal = () => {
+    setToggleModal(false)
+    clean()
   }
 
 
   return <AluraFlixContext.Provider value={{
-    videosByCategory,
-    findVideosByCategory,
-    showIframeVideo,
-    metadata,
-    hideIframeVideo,
+    categories,
+    clean,
+    closeModal,
     deleteVideo,
     findAllCategories,
-    categories
+    findVideosByCategory,
+    hideIframeVideo,
+    metadata,
+    onChangeInput,
+    onSubmitForm,
+    setToggleModal,
+    showEditForm,
+    showIframeVideo,
+    toggleModal,
+    video,
+    videosByCategory,
   }}>
     {children}
   </AluraFlixContext.Provider>

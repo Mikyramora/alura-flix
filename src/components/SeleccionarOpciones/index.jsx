@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import {useAluraFlixContext} from "../../contex/AluraFlixContext.jsx";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 
 const Frame = styled.div`
@@ -16,7 +16,6 @@ const Label = styled.label`
 `
 
 const Select = styled.select`
-    border: aliceblue;
     padding: 10px;
     outline-color: black;
     height: 51px;
@@ -24,11 +23,17 @@ const Select = styled.select`
     border-radius: 10px;
     background-color: #143757;
     font-size: 20px;
-    color: aliceblue;
 `
 
-const SeleccionarOpciones = () => {
+const SeleccionarOpciones = ({hasError, ...props}) => {
   const {findAllCategories, categories} = useAluraFlixContext()
+  const [isTouched, setIsTouched] = useState(false);
+
+  const handleBlur = () => {
+    setIsTouched(true);
+  };
+
+  const isInvalid = (isTouched && !props.value) || hasError
 
   useEffect(() => {
     findAllCategories()
@@ -36,13 +41,17 @@ const SeleccionarOpciones = () => {
 
   return <Frame>
     <Label>Categorías</Label>
-    <Select>
+    <Select
+        {...props}
+        className={isInvalid ? 'invalid' : 'valid'}
+        onBlur={handleBlur}>
+      <option value="" disabled>Selecciona una categoría</option>
       {
-        categories.map(
-            category => <option key={category.id}>{category.description}</option>)
+        categories.map(({id, description}) => (
+            <option key={id} value={description}>{description}</option>
+        ))
       }
     </Select>
-
   </Frame>
 }
 

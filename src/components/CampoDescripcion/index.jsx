@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import {useState} from "react";
 
 const Frame = styled.div`
     border: none;
@@ -19,20 +20,28 @@ const DescripcionUsuario = styled.textarea`
     width: 600px;
     height: 200px;
     gap: 10px;
-    background-color: transparent;
-    border: none;
     border-radius: 10px;
     padding: 15px;
     font-size: 20px;
     background-color: #173b5c;
-    color: aliceblue;
 `
 
-const CampoDescripcion = () => {
-    return<Frame>
-        <Label>Descripción</Label>
-        <DescripcionUsuario placeholder="¿De qué se trata éste video?" required/>
-    </Frame>
+const CampoDescripcion = ({hasError, ...props}) => {
+  const [isTouched, setIsTouched] = useState(false);
+
+  const handleBlur = () => {
+    setIsTouched(true);
+  };
+
+  const isInvalid = (isTouched && !props.value) || hasError
+
+  return <Frame>
+    <Label>Descripción</Label>
+    <DescripcionUsuario
+        onBlur={handleBlur}
+        className={isInvalid ? 'invalid' : 'valid'}
+        {...props}/>
+  </Frame>
 }
 
 export default CampoDescripcion

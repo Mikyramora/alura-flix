@@ -27,7 +27,7 @@ const Select = styled.select`
     color: aliceblue;
 `
 
-const OpcionesModal = () => {
+const OpcionesModal = (props) => {
   const {findAllCategories, categories} = useAluraFlixContext()
 
   useEffect(() => {
@@ -36,13 +36,12 @@ const OpcionesModal = () => {
 
   return <Frame>
     <Label>Categorías</Label>
-    <Select>
+    <Select {...props}>
       {
         categories.map(
             category => <option key={category.id}>{category.description}</option>)
       }
     </Select>
-
   </Frame>
 }
 

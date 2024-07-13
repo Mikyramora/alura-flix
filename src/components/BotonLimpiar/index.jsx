@@ -17,9 +17,8 @@ const CleanStyled = styled.button`
 `
 
 
-
-const CleanButton = (props) => {
-    return <CleanStyled>{props.texto}</CleanStyled>
+const CleanButton = ({texto, ...props}) => {
+  return <CleanStyled {...props}>{texto}</CleanStyled>
 }
 
 export default CleanButton

@@ -15,16 +15,13 @@ const SaveStyled = styled.button`
     border-color: aliceblue;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         color: aliceblue;
     }
 `
 
-
-
-const SaveButton = (props) => {
-    return <SaveStyled>{props.texto}</SaveStyled>
-    
+const SaveButton = ({texto, ...props}) => {
+  return <SaveStyled {...props} >{texto}</SaveStyled>
 }
 
 export default SaveButton
