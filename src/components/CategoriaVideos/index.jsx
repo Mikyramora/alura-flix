@@ -1,6 +1,7 @@
 import {styled} from "styled-components";
 import BotonesCategoria from "../BotonesCategoria";
 import {useAluraFlixContext} from "../../contex/AluraFlixContext.jsx";
+import ModalEditar from "../ModalEditar/index.jsx";
 
 const FigureEstilizada = styled.figure`
     flex-grow: 1;
@@ -70,6 +71,7 @@ const CategoriaVideos = ({videoList, categoryName}) => {
               </CardCategoria>
           ))}
         </ContainerVideosEstilizado>
+       
       </FigureEstilizada>
   );
 };
