@@ -20,15 +20,17 @@ const Overlay = styled.div`
 const DialogEstilizado = styled.div`
     position: relative;
     width: 45%;
-    height: 80%;
+    height: 87%;
     margin: auto;
     background-color: #03122F;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+    border-radius: 17px;
 `
 
 const TituloModalEstilizado = styled.h2`
     font-size: 50px;
+    border-width: 3px;
+    border-style: solid none solid none;
+    border-color: gold;
 `
 const ContadorEstilizado = styled.div`
     display: flex;
@@ -38,48 +40,19 @@ const ContadorEstilizado = styled.div`
 const FormEstilizado = styled.form`
     padding: 0;
 `
-
 const BotonCerrar = styled.button`
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 13px;
+    right: 13px;
     background-color: #f44336;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 6px 11px;
 
     &:hover {
         background-color: #d32f2f;
-    }
-`;
-
-
-const BotonLimpiar = styled.button`
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-    opacity: 0.7;
-
-    &:hover {
-        opacity: 1;
-    }
-`;
-
-const BotonGuardar = styled.button`
-    background-color: #4CAF50; /* Verde */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #45a049;
     }
 `;
 
@@ -88,6 +61,38 @@ const BotonesContenedor = styled.div`
     justify-content: space-between;
     margin-top: 20px;
 `;
+
+const BotonLimpiar = styled.button`
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 35px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #45a049;
+    }
+`;
+
+const BotonGuardar = styled.button`
+    background-color: transparent; /* Verde */
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 35px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #45a049;
+    }
+`;
+
+
 
 const ModalEditar = () => {
   const {toggleModal, clean, closeModal, video, onChangeInput, onSubmitForm} = useAluraFlixContext()
@@ -140,8 +145,8 @@ const ModalEditar = () => {
           }}>X
           </BotonCerrar>
           <BotonesContenedor>
-            <BotonLimpiar onClick={() => clean()}>Limpiar</BotonLimpiar>
-            <BotonGuardar>Guardar</BotonGuardar>
+            <BotonLimpiar onClick={() => clean()}>LIMPIAR</BotonLimpiar>
+            <BotonGuardar>GUARDAR</BotonGuardar>
           </BotonesContenedor>
         </FormEstilizado>
       </ContadorEstilizado>
