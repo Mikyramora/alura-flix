@@ -26,7 +26,12 @@ const Instrucciones = styled.h2`
 const TituloFormulario = styled.h3`
     font-weight: 300;
     font-size: 1.8em;
-    margin: 15px 0 0 -1200px;
+    width: 1350px;
+    border-width: 1px;
+    border-style: solid none solid none;
+    border-color: gold;
+    padding: 30px 0 ;
+    margin: 15px 0 0 0;
 `
 
 const Nuevo = () => {

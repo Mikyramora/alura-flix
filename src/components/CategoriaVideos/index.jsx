@@ -36,14 +36,16 @@ const ContainerVideosEstilizado = styled.div`
 const CardCategoria = styled.div`
     background-color: #0a082c;
     width: 400px;
-    height: 270px;
+    height: 272px;
     margin-right: 50px;
+    border-radius: 15px;
 `
 
 const ImgEstilizado = styled.img`
     width: 399px;
     height: 230px;
     border: 0;
+    border-radius: 15px 15px;
 `
 
 const CategoriaVideos = ({videoList, categoryName, background, scrollbarColor}) => {
@@ -63,6 +65,7 @@ const CategoriaVideos = ({videoList, categoryName, background, scrollbarColor}) 
                     referrerPolicy="strict-origin-when-cross-origin"
                     allowFullScreen
                 />
+
                 <BotonesCategoria id={video.id}/>
               </CardCategoria>
           ))}

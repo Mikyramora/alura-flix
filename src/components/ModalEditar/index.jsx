@@ -15,7 +15,7 @@ const Overlay = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 10;
-`;
+`
 
 const DialogEstilizado = styled.div`
     position: relative;

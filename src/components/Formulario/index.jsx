@@ -15,11 +15,11 @@ const FilasFormulario = styled.figure`
 `
 
 const ButtonContainer = styled.div`
-    width: 450px;
+    width: 430px;
     height: 55px;
-    margin: 60px 49px;
+    margin: 50px 64px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 `
 
 const Formulario = () => {
@@ -108,12 +108,12 @@ const Formulario = () => {
               hasError={formValuesCheck.descripcion}
           />
           <ButtonContainer>
-            <SaveButton texto="GUARDAR"/>
             <CleanButton
-                onClick={() => {
-                  clean()
-                }}
-                texto="LIMPIAR"/>
+                  onClick={() => {
+                    clean()
+                  }}
+                  texto="LIMPIAR"/>
+            <SaveButton texto="GUARDAR"/>
           </ButtonContainer>
         </div>
       </form>
