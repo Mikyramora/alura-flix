@@ -1,6 +1,7 @@
 import {createContext, useContext, useState} from "react";
 import axios from "axios";
 import {URLs} from "../res/urls.js";
+import Swal from 'sweetalert2'
 
 const AluraFlixContext = createContext({})
 
@@ -85,18 +86,27 @@ export const AluraFlixProvider = ({children}) => {
     setMetadata(video)
   }
 
-  //TODO: maybe you need or not, if you prefer delete this function is ok
+  //TODO
   const hideIframeVideo = () => {
     setMetadata(initialMetadataState)
   }
 
-  //TODO: possible improvement using https://sweetalert2.github.io/
   const deleteVideo = async (id) => {
     const {status} = await axios.delete(`${URLs.video}/${id}`)
     if (status !== 200) {
-      alert("Hubo un error al intentar borrar el video")
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Hubo un error al intentar borrar el video"
+      });
     }
-    alert("El video se elimino exitosamente")
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "El video se eliminó exitosamente",
+        showConfirmButton: false,
+        timer: 1500
+      });
     await findVideosByCategory()
   }
 
@@ -119,16 +129,36 @@ export const AluraFlixProvider = ({children}) => {
     if (isEdit) {
       const {status} = await axios.put(`${URLs.video}/${video.id}`, video)
       if (status !== 200) {
-        alert("Hubo un error al intentar editar el video")
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Hubo un error al intentar editar el video"
+        });
       }
-      alert("El video se edito exitosamente")
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "El video se editó exitosamente",
+        showConfirmButton: false,
+        timer: 1500
+      });
       setToggleModal(false)
     } else {
       const {status} = await axios.post(URLs.video, video)
       if (status !== 201) {
-        alert("Hubo un error al intentar agregar el video")
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Hubo un error al intentar agregar el video"
+        });
       }
-      alert("El video se agrego exitosamente")
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "El video se agregó exitosamente",
+        showConfirmButton: false,
+        timer: 1500
+      });
     }
     setVideo(initialVideoState)
     await findVideosByCategory()

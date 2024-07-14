@@ -15,15 +15,15 @@ const FigureEstilizada = styled.figure`
 `
 
 const ContainerBannerEstilizado = styled.div`
-    height: 430px;
-    width: 800px;
-    margin: 50px 0 10px 150px;
+    height: 450px;
+    width: 820px;
+    margin: 30px 0 10px 130px;
 `
 
 const CategoriaEstilizadaPrincipal = styled.h1`
     width: 270px;
     height: 52px;
-    background: #6BD1FF;
+    background-color: #462079;
     color: aliceblue;
     border-radius: 15px;
     font-weight: 900;
@@ -32,23 +32,26 @@ const CategoriaEstilizadaPrincipal = styled.h1`
     text-align: center;
 `
 
-
 const TituloEstilizado = styled.h2`
     font-weight: 400;
     font-size: 40px;
-    color: #FFFFFF;
-    max-width: 700px;
+    color: aliceblue;
+    max-width: 820px;
+    height: 93px;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #462079 #593785;
 `
 
 const ParrafoEstilizado = styled.p`
     width: 820px;
-    max-height: 200px;
+    max-height: 175px;
     font-size: 25px;
     line-height: 35px;
     color: aliceblue;
-    overflow-x: auto ;
+    overflow: auto;
+    scrollbar-color: #462079 #593785;
     scrollbar-width: thin;
-    scrollbar-color: #4391b4 #6BD1FF;
 `
 
 
@@ -62,7 +65,6 @@ const IframeEstilizado = styled.iframe`
 `
 
 const Banner = () => {
-
   const {metadata} = useAluraFlixContext()
 
   const {categoria, titulo, descripcion, videoURL} = metadata;
