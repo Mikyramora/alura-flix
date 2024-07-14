@@ -17,7 +17,12 @@ const BotonStyled = styled.button`
     color: aliceblue;
     background-color: transparent;
     border: 1px solid gold;
+    border-radius: 7px;
     cursor: pointer;
+    
+    &:hover {
+        background-color: darkblue;
+    }
 `
 
 const ImagenesBotonesCategoriaStyled = styled.img`

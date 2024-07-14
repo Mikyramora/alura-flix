@@ -14,6 +14,10 @@ const CleanStyled = styled.button`
     padding: 10px;
     border-color: aliceblue;
     cursor: pointer;
+    
+    &:hover {
+        background-color: darkblue;
+    }
 `
 
 

@@ -12,11 +12,11 @@ const SaveStyled = styled.button`
     color: aliceblue;
     margin-right: 5px;
     padding: 10px;
-    border-color: aliceblue;
+    border-color: gold;
     cursor: pointer;
 
     &:hover {
-        color: aliceblue;
+        background-color: darkblue;
     }
 `
 
