@@ -106,7 +106,7 @@ const ParrafoEstilizado = styled.p`
     @media (max-width: 1040px){
         font-size: 17px;
         max-height: 100px;
-        width: 400px;
+        width: 440px;
     }
 `
 
@@ -126,7 +126,7 @@ const IframeEstilizado = styled.iframe`
 
     @media (max-width: 1040px){
         margin: 15px 25px 18px 0;
-        width: 370px;
+        width: 390px;
         height: 280px;
     }
 `
