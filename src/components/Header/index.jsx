@@ -14,6 +14,14 @@ const HeaderEstilizado = styled.header`
         padding: 24px;
         background-color: aliceblue;
     }
+
+    @media (max-width: 1040px){
+        padding: 10px 0;
+        img{
+            width: 200px;
+            margin: 0 20px;
+        }
+    }
 `
 
 const Header = () => {

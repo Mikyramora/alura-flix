@@ -7,6 +7,7 @@ const FooterStyled = styled.footer`
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
   min-height: 100px;
   max-width: 100%;
   margin-bottom: 0;
@@ -23,8 +24,6 @@ const TituloEstilizado = styled.h3`
   font-weight: 600;
   font-size: 20px;
   color: aliceblue;
-  margin-left: 700px;
-
 `;
 
 const Footer = () => {

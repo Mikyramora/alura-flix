@@ -7,6 +7,11 @@ const ContainerStyled = styled.div`
     align-items: center;
     width: 430px;
     margin-right: 70px;
+
+    @media (max-width: 1040px){
+        margin-right: 20px;
+        width: 300px;
+    }
 `
 
 const ButtonHome = styled.button`
@@ -26,6 +31,11 @@ const ButtonHome = styled.button`
     &:hover {
         background-color: darkblue;
     }
+
+    @media (max-width: 1040px){
+        width: 130px;
+        font-size: 15px;
+    }
 `
 
 const ButtonNuevo = styled.button`
@@ -44,6 +54,11 @@ const ButtonNuevo = styled.button`
 
     &:hover {
         background-color: darkblue;
+    }
+
+    @media (max-width: 1040px){
+        width: 130px;
+        font-size: 15px;
     }
 `
 
