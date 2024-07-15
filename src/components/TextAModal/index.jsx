@@ -34,6 +34,10 @@ const DescripcionUsuario = styled.textarea`
      padding: 8px;
      width: 33vw;
     }
+
+    @media (max-width: 1040px){
+      width: 45vw;
+    }
 `
 
 const TextAModal = (props) => {

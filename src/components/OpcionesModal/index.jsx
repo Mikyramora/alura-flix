@@ -37,6 +37,11 @@ const Select = styled.select`
      height: 4vh;
      margin: 0;
     }
+
+    @media (max-width: 1040px){
+      width: 46.7vw;
+      height: 3vh;
+    }
 `
 
 const OpcionesModal = (props) => {

@@ -29,6 +29,11 @@ const DialogEstilizado = styled.div`
      width: 52vw;
      height: 90vh;
     }
+
+    @media (max-width: 1040px){
+      width: 75vw;
+      height: 68.5vh;
+    }
 `
 
 const TituloModalEstilizado = styled.h2`
@@ -94,6 +99,10 @@ const BotonEditar = styled.button`
      font-size: 15px;
      width: 9vw;
      padding: 8px 0;
+    }
+
+    @media (max-width: 1040px){
+      width: 11vw;
     }
 `;
 

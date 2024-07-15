@@ -38,6 +38,10 @@ const InteractuarTexto = styled.input`
      width: 33vw;
     }
 
+    @media (max-width: 1040px){
+      width: 45vw;
+    }
+
 `
 
 const CampoTextoModal = ({titulo, ...props}) => {
