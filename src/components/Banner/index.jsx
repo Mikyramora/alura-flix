@@ -23,7 +23,7 @@ const FigureEstilizada = styled.figure`
 
     @media (max-width: 740px){
         flex-direction: column;
-        max-height: 36vh;
+        max-height: 39vh;
     }
     
 `
@@ -43,7 +43,7 @@ const ContainerBannerEstilizado = styled.div`
     }
 
     @media (max-width: 740px){
-        height: 7vh;
+        height: 8.5vh;
         width: 85vw;
         margin-top: 10px;
     }
@@ -73,10 +73,10 @@ const CategoriaEstilizadaPrincipal = styled.h1`
     }
 
     @media (max-width: 740px){
-        font-size: 1.2em;
-        width: 25vw;
-        height: 1.8vh;
-        padding: 2px;
+        font-size: 1.1em;
+        width: 28vw;
+        height: 1.9vh;
+        padding: 1px;
     }
 `
 
@@ -103,8 +103,8 @@ const TituloEstilizado = styled.h2`
 
     @media (max-width: 740px){          
         max-width: 85vw;
-        height: 1.9vh;
-        font-size: 1.2em;
+        height: 2.3vh;
+        font-size: 1.1em;
         background-color: #593785;
     }
 `
