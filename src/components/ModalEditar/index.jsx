@@ -24,6 +24,11 @@ const DialogEstilizado = styled.div`
     margin: auto;
     background-color: #03122F;
     border-radius: 17px;
+
+    @media (max-width:1420px){
+     width: 52vw;
+     height: 90vh;
+    }
 `
 
 const TituloModalEstilizado = styled.h2`
@@ -31,6 +36,10 @@ const TituloModalEstilizado = styled.h2`
     border-width: 3px;
     border-style: solid none solid none;
     border-color: gold;
+
+    @media (max-width:1420px){
+     font-size: 40px;
+    }
 `
 const ContadorEstilizado = styled.div`
     display: flex;
@@ -60,35 +69,31 @@ const BotonesContenedor = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+
+    @media (max-width:1420px){
+     margin-top: 15px;
+    }
 `;
 
-const BotonLimpiar = styled.button`
+const BotonEditar = styled.button`
     background-color: transparent;
     color: white;
     font-size: 18px;
     font-weight: 800;
     border: 2px solid white;
     border-radius: 10px;
-    padding: 10px 35px;
+    width: 8vw;
+    padding: 10px 0;
     cursor: pointer;
 
     &:hover {
         background-color: #45a049;
     }
-`;
 
-const BotonGuardar = styled.button`
-    background-color: transparent; /* Verde */
-    color: white;
-    font-size: 18px;
-    font-weight: 800;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 10px 35px;
-    cursor: pointer;
-
-    &:hover {
-        background-color: #45a049;
+    @media (max-width:1420px){
+     font-size: 15px;
+     width: 9vw;
+     padding: 8px 0;
     }
 `;
 
@@ -145,8 +150,8 @@ const ModalEditar = () => {
           }}>X
           </BotonCerrar>
           <BotonesContenedor>
-            <BotonLimpiar onClick={() => clean()}>LIMPIAR</BotonLimpiar>
-            <BotonGuardar>GUARDAR</BotonGuardar>
+            <BotonEditar onClick={() => clean()}>LIMPIAR</BotonEditar>
+            <BotonEditar>GUARDAR</BotonEditar>
           </BotonesContenedor>
         </FormEstilizado>
       </ContadorEstilizado>

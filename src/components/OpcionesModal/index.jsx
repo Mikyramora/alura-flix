@@ -13,18 +13,30 @@ const Label = styled.label`
     font-weight: 600;
     display: block;
     margin-bottom: 5px;
+    
+    @media (max-width:1420px){
+     margin-top: 0;
+     font-size: 15px;
+    }
 `
 
 const Select = styled.select`
     border: aliceblue;
     padding: 3px 8px;
-    outline-color: black;
     height: 36px;
-    width: 620px;
+    width: 32vw;
     border-radius: 10px;
     background-color: #143757;
     font-size: 17px;
     color: aliceblue;
+
+    @media (max-width:1420px){
+     font-size: 17px;
+     padding: 3px 6px;
+     width: 34.3vw;
+     height: 4vh;
+     margin: 0;
+    }
 `
 
 const OpcionesModal = (props) => {
