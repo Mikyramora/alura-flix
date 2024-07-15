@@ -7,13 +7,17 @@ const FigureEstilizada = styled.figure`
     display: block;
     align-items: center;
     justify-content: space-around;
-    min-height: 350px;
+    min-height: 40vh;
     margin: 35px 60px;
     max-width: 100%;
+
+    @media (max-width:1420px){
+     min-height: 37vh;
+    }
 `
 
 const CategoriaEstilizada = styled.h1`
-    width: 265px;
+    width: 15vw;
     height: 33px;
     text-align: center;
     color: aliceblue;
@@ -21,31 +25,57 @@ const CategoriaEstilizada = styled.h1`
     font-weight: 900;
     font-size: 30px;
     padding: 5px;
+
+    @media (max-width: 1040px){
+      width: 18vw;
+      font-size: 25px;
+      height: 2.3vh;
+    }
 `
 
 const ContainerVideosEstilizado = styled.div`
-    height: 305px;
+    height: 32vh;
     width: 100%;
     margin: 0;
     display: flex;
     flex-direction: row;
     overflow-y: auto;
     scrollbar-width: thin;
+
+    @media (max-width:1420px){
+     height: 32.5vh;
+    }
 `
 
 const CardCategoria = styled.div`
     background-color: #0a082c;
-    width: 400px;
-    height: 272px;
+    width: 22vw;
+    height: 29vh;
     margin-right: 50px;
     border-radius: 15px;
+    
+    @media (max-width:1420px){
+     width: 50vh;
+    }
+
+    @media (max-width: 1040px){
+      height: 28vh;
+    }
 `
 
 const ImgEstilizado = styled.img`
-    width: 399px;
-    height: 230px;
+    width: 21vw;
+    height: 24vh;
     border: 0;
     border-radius: 15px 15px;
+
+    @media (max-width:1420px){
+     width: 27vw;
+    }
+
+    @media (max-width: 1040px){
+      width: 41vw;
+    }
 `
 
 const CategoriaVideos = ({videoList, categoryName, background, scrollbarColor}) => {
