@@ -17,6 +17,18 @@ const FooterStyled = styled.footer`
         padding: 20px;
         background-color: aliceblue;
     }
+
+    @media (max-width: 1040px){
+      min-height: 70px;
+        img{
+            width: 150px;
+            padding: 15px;
+        }
+    }
+
+    @media (max-width: 740px){
+      display: none;
+    }
 `;
 
 
