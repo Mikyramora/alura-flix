@@ -26,7 +26,7 @@ const FigureEstilizada = styled.figure`
 const ContainerBannerEstilizado = styled.div`
     height: 370px;
     width: 820px;
-    margin: 30px 0 10px 130px;
+    margin: 20px 0 10px 130px;
 
     @media (max-width:1420px){
         margin: 20px 0 10px 50px;
@@ -41,7 +41,7 @@ const ContainerBannerEstilizado = styled.div`
 `
 
 const CategoriaEstilizadaPrincipal = styled.h1`
-    width: 270px;
+    width: 300px;
     height: 52px;
     background-color: #462079;
     color: aliceblue;
