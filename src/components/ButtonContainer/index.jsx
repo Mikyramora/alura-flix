@@ -8,6 +8,10 @@ const ContainerStyled = styled.div`
     width: 430px;
     margin-right: 70px;
 
+    @media (max-width:1420px){
+     margin-right: 50px;
+    }
+
     @media (max-width: 1040px){
         margin-right: 20px;
         width: 300px;
