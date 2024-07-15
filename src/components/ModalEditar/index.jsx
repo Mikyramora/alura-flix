@@ -24,6 +24,10 @@ const DialogEstilizado = styled.div`
     margin: auto;
     background-color: #03122F;
     border-radius: 17px;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media (max-width:1420px){
      width: 52vw;
