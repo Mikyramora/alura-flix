@@ -9,57 +9,58 @@ const FigureEstilizada = styled.figure`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    min-height: 500px;
+    min-height: 50vh;
     margin: 0;
     max-width: 100%;
 
     @media (max-width:1420px){
-     min-height: 300px;
+     min-height: 33vh;
     }
 
     @media (max-width: 1040px){
-        min-height: 200px;
+        min-height: 30vh;
     }
 
 `
 
 const ContainerBannerEstilizado = styled.div`
-    height: 370px;
+    height: 40vh;
     width: 820px;
-    margin: 20px 0 10px 130px;
+    margin: 0 0 10px 130px;
 
     @media (max-width:1420px){
         margin: 20px 0 10px 50px;
+        width: 48vw;
+        height: 44vh;
     }
 
     @media (max-width: 1040px){
         margin: 15px 0 10px 20px;
-        width: 310px;
-        height: 280px;
+        width: 53vw;
+        height: 25vh;
     }
 
 `
 
 const CategoriaEstilizadaPrincipal = styled.h1`
-    width: 300px;
+    width: 18vw;
     height: 52px;
     background-color: #462079;
     color: aliceblue;
     border-radius: 15px;
     font-weight: 900;
-    font-size: 48px;
+    font-size: 47px;
     padding: 8px;
     text-align: center;
 
     @media (max-width:1420px){
-        width: 210px;
+        width: 23vw;
         height: 42px;
         font-size: 38px;
     }
 
     @media (max-width: 1040px){
         font-size: 28px;
-        width: 150px;
         height: 32px;
     }
 `
@@ -68,28 +69,27 @@ const TituloEstilizado = styled.h2`
     font-weight: 400;
     font-size: 40px;
     color: aliceblue;
-    max-width: 820px;
+    max-width: 70vh;
     height: 93px;
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #462079 #593785;
 
     @media (max-width:1420px){
-     font-size: 32px;
-     max-width: 500px;
-     height: 78px;
+     font-size: 30px;
+     height: 9.1vh;
     }
 
     @media (max-width: 1040px){
         font-size: 22px;
-        max-width: 300px;
-        height: 58px;
+        max-width: 43vw;
+        height: 4.6vh;
     }
 `
 
 const ParrafoEstilizado = styled.p`
     width: 820px;
-    max-height: 175px;
+    max-height: 15vh;
     font-size: 25px;
     line-height: 35px;
     color: aliceblue;
@@ -99,14 +99,14 @@ const ParrafoEstilizado = styled.p`
 
     @media (max-width:1420px){
      font-size: 20px;
-     max-height: 140px;
-     width: 610px;
+     max-height: 14vh;
+     width: 47vw;
     }
 
     @media (max-width: 1040px){
         font-size: 17px;
-        max-height: 100px;
-        width: 440px;
+        max-height: 10vh;
+        width: 49vw;
     }
 `
 
@@ -115,19 +115,19 @@ const IframeEstilizado = styled.iframe`
     border-radius: 15px;
     box-shadow: 5px 5px 10px 3px darkblue;
     border: 0;
-    width: 500px; 
-    height: 350px; 
+    width: 35vw; 
+    height: 40vh; 
 
     @media (max-width:1420px){
         margin-right: 50px;
-        width: 450px;
-        height: 310px;
+        width: 40vw;
+        height: 40vh;
     }
 
     @media (max-width: 1040px){
         margin: 15px 25px 18px 0;
-        width: 390px;
-        height: 280px;
+        width: 43vw;
+        height: 25vh;
     }
 `
 
