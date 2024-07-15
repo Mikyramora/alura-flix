@@ -52,7 +52,7 @@ const CategoriaEstilizadaPrincipal = styled.h1`
     text-align: center;
 
     @media (max-width:1420px){
-        width: 200px;
+        width: 210px;
         height: 42px;
         font-size: 38px;
     }
@@ -106,7 +106,7 @@ const ParrafoEstilizado = styled.p`
     @media (max-width: 1040px){
         font-size: 17px;
         max-height: 100px;
-        width: 310px;
+        width: 400px;
     }
 `
 
