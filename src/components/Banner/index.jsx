@@ -92,7 +92,7 @@ const TituloEstilizado = styled.h2`
 
     @media (max-width:1600px){
      font-size: 30px;
-     height: 9.1vh;
+     height: 6.6vh;
     }
 
     @media (max-width: 1040px){
@@ -105,13 +105,12 @@ const TituloEstilizado = styled.h2`
         max-width: 85vw;
         height: 2.3vh;
         font-size: 1.1em;
-        background-color: #593785;
     }
 `
 
 const ParrafoEstilizado = styled.p`
     width: 46vw;
-    max-height: 15vh;
+    max-height: 14.8vh;
     font-size: 25px;
     line-height: 35px;
     color: aliceblue;
@@ -119,9 +118,9 @@ const ParrafoEstilizado = styled.p`
     scrollbar-color: #462079 #593785;
     scrollbar-width: thin;
 
-    @media (max-width:1420px){
+    @media (max-width:1600px){
      font-size: 20px;
-     max-height: 14vh;
+     max-height: 10vh;
      width: 47vw;
     }
 
