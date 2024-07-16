@@ -61,7 +61,7 @@ const ImagenesBotonesCategoriaStyled = styled.img`
     }
     @media (max-width: 700px){
       margin-right: 5px;
-      width: 1.8vw;
+      width: 2vw;
     }
 `
 
