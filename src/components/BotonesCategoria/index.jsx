@@ -46,7 +46,7 @@ const BotonStyled = styled.button`
       height: 3.2vh;
     }
     @media (max-width: 600px){
-      width: 20vw;
+      width: 22vw;
       height: 3.2vh;
     }
 `
