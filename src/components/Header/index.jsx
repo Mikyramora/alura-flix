@@ -6,13 +6,16 @@ const HeaderEstilizado = styled.header`
     background-size: cover;
     padding: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     
     img{
-        width: 280px;
-        margin-left: 75px;
+        width: 16vw;
         padding: 24px;
-        background-color: aliceblue;
+        background-color: #071d30;
+    }
+
+    @media (max-width:1600px){
+        padding: 10px;
     }
 
     @media (max-width:1420px){
@@ -28,6 +31,13 @@ const HeaderEstilizado = styled.header`
             margin: 0 20px;
             padding: 20px;
         }
+    }
+
+    @media (max-width: 740px){
+        img{
+            display: none;
+        }
+        
     }
 `
 

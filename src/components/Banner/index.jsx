@@ -18,13 +18,14 @@ const FigureEstilizada = styled.figure`
     }
 
     @media (max-width: 1040px){
-        min-height: 30vh;
+        min-height: 35vh;
     }
 
-    @media (max-width: 740px){
+    @media (max-width: 800px){
         flex-direction: column;
-        max-height: 39vh;
+        max-height: 45vh;
     }
+
     
 `
 
@@ -42,8 +43,8 @@ const ContainerBannerEstilizado = styled.div`
         height: 25vh;
     }
 
-    @media (max-width: 740px){
-        height: 8.5vh;
+    @media (max-width: 800px){
+        height: 9vh;
         width: 85vw;
         margin-top: 10px;
     }
@@ -72,11 +73,11 @@ const CategoriaEstilizadaPrincipal = styled.h1`
         height: 32px;
     }
 
-    @media (max-width: 740px){
-        font-size: 1.1em;
-        width: 28vw;
-        height: 1.9vh;
-        padding: 1px;
+    @media (max-width: 800px){
+        font-size: 1.2em;
+        width: 29vw;
+        height: 2.3vh;
+        padding: 4px;
     }
 `
 
@@ -101,7 +102,7 @@ const TituloEstilizado = styled.h2`
         height: 4.6vh;
     }
 
-    @media (max-width: 740px){          
+    @media (max-width: 800px){          
         max-width: 85vw;
         height: 2.3vh;
         font-size: 1.1em;
@@ -130,7 +131,7 @@ const ParrafoEstilizado = styled.p`
         width: 49vw;
     }
 
-    @media (max-width: 740px){
+    @media (max-width: 800px){
         display: none;
     }
 `
@@ -150,12 +151,13 @@ const IframeEstilizado = styled.iframe`
 
     @media (max-width: 1040px){
         width: 43vw;
-        height: 25vh;
+        height: 30vh;
         margin-bottom: 10px;
     }
 
-    @media (max-width: 740px){
-        width: 84vw;
+    @media (max-width: 800px){
+        width: 80vw;
+        height: 30vh;
     }
 `
 

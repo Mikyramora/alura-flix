@@ -5,11 +5,10 @@ const ContainerStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 430px;
-    margin-right: 70px;
-
-    @media (max-width:1420px){
-     margin-right: 50px;
+    width: 30vw;
+    
+    @media (max-width:1600px){
+     width: 28vw;
     }
 
     @media (max-width: 1040px){
@@ -18,12 +17,12 @@ const ContainerStyled = styled.div`
     }
 `
 
-const ButtonHome = styled.button`
+const ButtonHeader = styled.button`
     background-color: #190b28;
-    width: 200px;
-    height: 55px;
+    width: 12vw;
+    height: 6vh;
     color: aliceblue;
-    padding: 10px;
+    padding: 8px;
     font-size: 20px;
     font-weight: 900;
     line-height: 24px;
@@ -36,32 +35,14 @@ const ButtonHome = styled.button`
         background-color: darkblue;
     }
 
-    @media (max-width: 1040px){
-        width: 130px;
-        font-size: 15px;
-    }
-`
-
-const ButtonNuevo = styled.button`
-    background-color: #190b28;
-    width: 200px;
-    height: 55px;
-    color: aliceblue;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 24px;
-    border-radius: 15px;
-    border-color: darkblue;
-    box-shadow: 0px 0px 20px 10px darkblue;
-    cursor: pointer;
-
-    &:hover {
-        background-color: darkblue;
+    @media (max-width:1600px){
+     width: 11vw;
+     height: 7vh;
+     font-size: 18px;
     }
 
     @media (max-width: 1040px){
-        width: 130px;
+        width: 15vw;
         font-size: 15px;
     }
 `
@@ -69,8 +50,8 @@ const ButtonNuevo = styled.button`
 const ButtonContainer=()=>{
     return(
             <ContainerStyled>
-                <Link to= "/"><ButtonHome>HOME</ButtonHome></Link>
-                <Link to="/nuevo"><ButtonNuevo >NUEVO VIDEO</ButtonNuevo></Link>
+                <Link to= "/"><ButtonHeader>HOME</ButtonHeader></Link>
+                <Link to="/nuevo"><ButtonHeader>NUEVO VIDEO</ButtonHeader></Link>
             </ContainerStyled>
         
     )
