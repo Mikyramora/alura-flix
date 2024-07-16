@@ -84,6 +84,7 @@ const CardCategoria = styled.div`
     @media (max-width: 1040px){
       height: 32vh;
       width: 40vw;
+      margin-right: 53px;
     }
 
     @media (max-width: 870px){
@@ -115,7 +116,7 @@ const ImgEstilizado = styled.img`
     }
 
     @media (max-width: 1040px){
-      width: 46vw;
+      width: 40vw;
     }
 
     @media (max-width: 800px){
