@@ -18,6 +18,10 @@ const BotonesCategoriaStyled = styled.div`
     @media (max-width: 1040px){
       width: 41vw;
     }
+
+    @media (max-width: 600px){
+      width: 75vw;
+    }
 `
 
 const BotonStyled = styled.button`
@@ -39,6 +43,10 @@ const BotonStyled = styled.button`
 
     @media (max-width: 1040px){
       width: 11vw;
+      height: 3.2vh;
+    }
+    @media (max-width: 600px){
+      width: 18vw;
       height: 3.2vh;
     }
 `

@@ -40,6 +40,11 @@ const DialogEstilizado = styled.div`
         width: 75vw;
         height: 68.5vh;
     }
+
+    @media (max-width: 700px){
+      height: 75vh;
+    }
+    
 `
 
 const TituloModalEstilizado = styled.h2`
@@ -50,6 +55,10 @@ const TituloModalEstilizado = styled.h2`
 
     @media (max-width: 1420px) {
         font-size: 40px;
+    }
+
+    @media (max-width: 700px){
+      font-size: 30px;
     }
 `
 const ContadorEstilizado = styled.div`
@@ -73,6 +82,12 @@ const BotonCerrar = styled.button`
 
     &:hover {
         background-color: #d32f2f;
+    }
+
+    @media (max-width: 700px){
+      top: 8px;
+      right: 8px;
+      padding: 3px 8px;
     }
 `;
 
@@ -109,6 +124,11 @@ const BotonEditar = styled.button`
 
     @media (max-width: 1040px) {
         width: 11vw;
+    }
+
+    @media (max-width: 700px){
+      font-size: 10px;
+      width: 15vw;
     }
 `;
 

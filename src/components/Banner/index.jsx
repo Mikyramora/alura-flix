@@ -18,18 +18,18 @@ const FigureEstilizada = styled.figure`
     }
 
     @media (max-width: 1040px){
-        min-height: 30vh;
+        min-height: 35vh;
     }
 
-    @media (max-width: 740px){
+    @media (max-width: 800px){
         flex-direction: column;
-        max-height: 39vh;
+        max-height: 46vh;
     }
     
 `
 
 const ContainerBannerEstilizado = styled.div`
-    height: 40vh;
+    height: 25vh;
     width: 42vw;
     
     @media (max-width:1600px){
@@ -42,8 +42,8 @@ const ContainerBannerEstilizado = styled.div`
         height: 25vh;
     }
 
-    @media (max-width: 740px){
-        height: 8.5vh;
+    @media (max-width: 800px){
+        height: 9vh;
         width: 85vw;
         margin-top: 10px;
     }
@@ -73,10 +73,10 @@ const CategoriaEstilizadaPrincipal = styled.h1`
     }
 
     @media (max-width: 740px){
-        font-size: 1.1em;
-        width: 28vw;
-        height: 1.9vh;
-        padding: 1px;
+        font-size: 1.2em;
+        width: 180px;
+        height: 23px;
+        padding: 4px;
     }
 `
 
@@ -85,7 +85,7 @@ const TituloEstilizado = styled.h2`
     font-size: 40px;
     color: aliceblue;
     max-width: 70vh;
-    height: 93px;
+    height: 4.6vh;
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #462079 #593785;
@@ -101,15 +101,16 @@ const TituloEstilizado = styled.h2`
         height: 4.6vh;
     }
 
-    @media (max-width: 740px){          
+    @media (max-width: 800px){          
         max-width: 85vw;
-        height: 2.3vh;
+        height: 2.5vh;
         font-size: 1.1em;
+        margin-bottom: 10px;
     }
 `
 
 const ParrafoEstilizado = styled.p`
-    width: 46vw;
+    width: 49vw;
     max-height: 14.8vh;
     font-size: 25px;
     line-height: 35px;
@@ -130,7 +131,7 @@ const ParrafoEstilizado = styled.p`
         width: 49vw;
     }
 
-    @media (max-width: 740px){
+    @media (max-width: 800px){
         display: none;
     }
 `
@@ -154,8 +155,9 @@ const IframeEstilizado = styled.iframe`
         margin-bottom: 10px;
     }
 
-    @media (max-width: 740px){
+    @media (max-width: 800px){
         width: 84vw;
+        height: 40vh;
     }
 `
 

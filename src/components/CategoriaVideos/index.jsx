@@ -8,28 +8,41 @@ const FigureEstilizada = styled.figure`
     align-items: center;
     justify-content: space-around;
     min-height: 40vh;
-    margin: 35px 60px;
+    margin: 35px 41px;
     max-width: 100%;
 
-    @media (max-width:1420px){
-     min-height: 37vh;
+    @media (max-width:1600px){
+     min-height: 30vh;
+    }
+
+    @media (max-width: 800px){
+        margin: 25px 80px;
+    }
+
+    @media (max-width: 600px){
+      margin: 30px 30px 30px 45px;
     }
 `
 
 const CategoriaEstilizada = styled.h1`
     width: 15vw;
-    height: 33px;
+    height: 3.2vh;
     text-align: center;
     color: aliceblue;
     border-radius: 15px;
     font-weight: 900;
-    font-size: 30px;
+    font-size: 25px;
     padding: 5px;
+    
 
     @media (max-width: 1040px){
       width: 18vw;
       font-size: 25px;
       height: 2.3vh;
+    }
+
+    @media (max-width: 800px){
+      width: 200px;
     }
 `
 
@@ -42,8 +55,16 @@ const ContainerVideosEstilizado = styled.div`
     overflow-y: auto;
     scrollbar-width: thin;
 
-    @media (max-width:1420px){
-     height: 32.5vh;
+    @media (max-width:1600px){
+     height: 33.5vh;
+    }
+
+    @media (max-width: 1350px){
+      
+    }
+
+    @media (max-width: 600px){
+      height: 35vh;
     }
 `
 
@@ -54,12 +75,26 @@ const CardCategoria = styled.div`
     margin-right: 50px;
     border-radius: 15px;
     
-    @media (max-width:1420px){
-     width: 50vh;
+    @media (max-width:1600px){
+     width: 54vw;
+     height: 32.5vh;
     }
 
     @media (max-width: 1040px){
-      height: 28vh;
+      height: 32vh;
+      width: 40vw;
+    }
+
+    @media (max-width: 870px){
+        margin-right: 100px;
+        height: 33vh;
+        width: 55vw;
+    }
+
+    @media (max-width: 600px){
+     margin-right: 55px;
+     width: 75vw;
+     height: 32vh;
     }
 `
 
@@ -69,12 +104,24 @@ const ImgEstilizado = styled.img`
     border: 0;
     border-radius: 15px 15px;
 
-    @media (max-width:1420px){
-     width: 27vw;
+    @media (max-width:1600px){
+     width: 29vw;
+     height: 28vh;
+    }
+
+    @media (max-width: 1350px){
+      width: 40vw;
     }
 
     @media (max-width: 1040px){
-      width: 41vw;
+      width: 46vw;
+    }
+
+    @media (max-width: 800px){
+      width: 70vw;
+    }
+    @media (max-width: 600px) {
+      width: 75vw;
     }
 `
 

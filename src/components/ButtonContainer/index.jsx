@@ -18,7 +18,7 @@ const ContainerStyled = styled.div`
     }
 `
 
-const ButtonHome = styled.button`
+const ButtonHeader = styled.button`
     background-color: #190b28;
     width: 200px;
     height: 55px;
@@ -40,39 +40,19 @@ const ButtonHome = styled.button`
         width: 130px;
         font-size: 15px;
     }
-`
 
-const ButtonNuevo = styled.button`
-    background-color: #190b28;
-    width: 200px;
-    height: 55px;
-    color: aliceblue;
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 900;
-    line-height: 24px;
-    border-radius: 15px;
-    border-color: darkblue;
-    box-shadow: 0px 0px 20px 10px darkblue;
-    cursor: pointer;
-
-    &:hover {
-        background-color: darkblue;
-    }
-
-    @media (max-width: 1040px){
-        width: 130px;
-        font-size: 15px;
+    @media (max-width: 700px){
+        width: 120px;
+        font-size: 13px;
     }
 `
 
 const ButtonContainer=()=>{
     return(
             <ContainerStyled>
-                <Link to= "/"><ButtonHome>HOME</ButtonHome></Link>
-                <Link to="/nuevo"><ButtonNuevo >NUEVO VIDEO</ButtonNuevo></Link>
+                <Link to= "/"><ButtonHeader>HOME</ButtonHeader></Link>
+                <Link to="/nuevo"><ButtonHeader>NUEVO VIDEO</ButtonHeader></Link>
             </ContainerStyled>
-        
     )
 }
 
