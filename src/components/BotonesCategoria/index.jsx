@@ -10,16 +10,13 @@ const BotonesCategoriaStyled = styled.div`
     justify-content: space-around;
     font-size: 13px;
 
-    @media (max-width:1600px){
-     width: 29vw;
+    @media (max-width:1420px){
+     width: 27vw;
      height: 2.4vh;
     }
 
-    @media (max-width: 1350px){
-      width: 40vw;
-    }
     @media (max-width: 1040px){
-      width: 45vw;
+      width: 41vw;
     }
 `
 

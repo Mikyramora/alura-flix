@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import {useState} from "react";
 
 const Frame = styled.div`
     border: none;
@@ -27,20 +26,15 @@ const DescripcionUsuario = styled.textarea`
 `
 
 const CampoDescripcion = ({hasError, ...props}) => {
-  const [isTouched, setIsTouched] = useState(false);
-
-  const handleBlur = () => {
-    setIsTouched(true);
-  };
-
-  const isInvalid = (isTouched && !props.value) || hasError
 
   return <Frame>
     <Label>Descripción</Label>
     <DescripcionUsuario
-        onBlur={handleBlur}
-        className={isInvalid ? 'invalid' : 'valid'}
+        className={hasError ? 'invalid' : 'valid'}
         {...props}/>
+    <div>
+      {hasError ? <p className="error-message">Campo obligatorio</p> : <> </>}
+    </div>
   </Frame>
 }
 

@@ -2,6 +2,7 @@ import {createContext, useContext, useState} from "react";
 import axios from "axios";
 import {URLs} from "../res/urls.js";
 import Swal from 'sweetalert2'
+import {convertToEmbeddedURL, extractThumbnail} from "../res/utils.js";
 
 const AluraFlixContext = createContext({})
 
@@ -100,13 +101,13 @@ export const AluraFlixProvider = ({children}) => {
         text: "Hubo un error al intentar borrar el video"
       });
     }
-      Swal.fire({
-        position: "top-end",
-        icon: "success",
-        title: "El video se eliminó exitosamente",
-        showConfirmButton: false,
-        timer: 1500
-      });
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "El video se eliminó exitosamente",
+      showConfirmButton: false,
+      timer: 1500
+    });
     await findVideosByCategory()
   }
 
@@ -120,9 +121,26 @@ export const AluraFlixProvider = ({children}) => {
   }
 
   const onChangeInput = (e) => {
-    setVideo({
-      ...video, [e.target.name]: e.target.value
-    })
+    switch (e.target.name) {
+      case "videoURL":
+
+        setVideo({
+          ...video,
+          videoURL: convertToEmbeddedURL(e.target.value),
+        })
+        break
+      case "imagenURL":
+        setVideo({
+          ...video,
+          imagenURL: extractThumbnail(e.target.value),
+        })
+        break
+      default:
+        setVideo({
+          ...video,
+          [e.target.name]: e.target.value
+        })
+    }
   }
 
   const onSubmitForm = async (isEdit = false) => {
@@ -135,7 +153,7 @@ export const AluraFlixProvider = ({children}) => {
           text: "Hubo un error al intentar editar el video"
         });
       }
-      Swal.fire({
+      await Swal.fire({
         position: "top-end",
         icon: "success",
         title: "El video se editó exitosamente",
@@ -152,7 +170,7 @@ export const AluraFlixProvider = ({children}) => {
           text: "Hubo un error al intentar agregar el video"
         });
       }
-      Swal.fire({
+      await Swal.fire({
         position: "top-end",
         icon: "success",
         title: "El video se agregó exitosamente",
@@ -160,7 +178,6 @@ export const AluraFlixProvider = ({children}) => {
         timer: 1500
       });
     }
-    setVideo(initialVideoState)
     await findVideosByCategory()
   }
   const clean = () => {

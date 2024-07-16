@@ -5,7 +5,8 @@ import CampoDescripcion from "../CampoDescripcion"
 import SaveButton from "../BotonGuardar"
 import CleanButton from "../BotonLimpiar"
 import {useAluraFlixContext} from "../../contex/AluraFlixContext.jsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import {constraints} from "../../res/utils.js";
 
 const FilasFormulario = styled.figure`
     display: flex;
@@ -24,42 +25,51 @@ const ButtonContainer = styled.div`
 
 const Formulario = () => {
 
-  const {video, onSubmitForm, onChangeInput, clean} = useAluraFlixContext()
+  const {video, onChangeInput, clean, onSubmitForm} = useAluraFlixContext()
 
-  const [formValuesCheck, setFormValuesCheck] = useState({
+  const initialFormValuesCheck = {
     titulo: false,
     categoria: false,
     imagenURL: false,
     videoURL: false,
-    descripcion: false
-  })
+    descripcion: false,
+  }
 
-  const onSubmit = (event) => {
-    event.preventDefault()
-    let isFormValid = true
-    for (const key in video) {
-      if (!video[key]) {
-        setFormValuesCheck((prevState) => ({
-          ...prevState,
-          [key]: true
-        }))
-        isFormValid = false
-      }
-    }
+  const [formValuesCheck, setFormValuesCheck] = useState(initialFormValuesCheck)
 
-    if (isFormValid) {
-      onSubmitForm()
+  const resetForm = () => {
+    clean()
+    setFormValuesCheck(initialFormValuesCheck)
+  }
+
+  const checkFrom = () => {
+    const check = {}
+    Object.keys(video).forEach((key) => {
+      check[key] = constraints.isEmptyValue(video[key])
+    })
+    setFormValuesCheck(check)
+    return Object.values(check).every((value) => !value)
+  }
+
+  const onBlurCheckInput = (e) => {
+    const {name, value} = e.target
+    setFormValuesCheck({
+      ...formValuesCheck,
+      [name]: constraints.isEmptyValue(value)
+    })
+  }
+
+  const onSubmit = async (e) => {
+    e.preventDefault()
+    if (checkFrom()) {
+      await onSubmitForm()
+      resetForm()
     }
   }
 
-  const onChangeForm = (event) => {
-    onChangeInput(event)
-    setFormValuesCheck((prevState) => ({
-      ...prevState,
-      [event.target.name]: false
-    }))
-  }
-
+  useEffect(() => {
+    resetForm()
+  }, []);
 
   return (
       <form onSubmit={onSubmit}>
@@ -69,16 +79,17 @@ const Formulario = () => {
                 titulo="Título"
                 name="titulo"
                 value={video.titulo}
-                onChange={onChangeForm}
+                onChange={onChangeInput}
+                onBlur={onBlurCheckInput}
                 placeholder="Ingrese el título"
                 hasError={formValuesCheck.titulo}
             />
             <SeleccionarOpciones
                 name="categoria"
                 value={video.categoria}
-                onChange={onChangeForm}
+                onChange={onChangeInput}
+                onBlur={onBlurCheckInput}
                 hasError={formValuesCheck.categoria}
-                defaultValue=""
             />
           </FilasFormulario>
           <FilasFormulario>
@@ -87,7 +98,8 @@ const Formulario = () => {
                 placeholder="Ingrese el enlace de la imagen"
                 name="imagenURL"
                 value={video.imagenURL}
-                onChange={onChangeForm}
+                onChange={onChangeInput}
+                onBlur={onBlurCheckInput}
                 hasError={formValuesCheck.imagenURL}
             />
 
@@ -96,23 +108,23 @@ const Formulario = () => {
                 placeholder="Ingrese el enlace del video"
                 name="videoURL"
                 value={video.videoURL}
-                onChange={onChangeForm}
+                onChange={onChangeInput}
+                onBlur={onBlurCheckInput}
                 hasError={formValuesCheck.videoURL}
             />
           </FilasFormulario>
           <CampoDescripcion
               name="descripcion"
               value={video.descripcion}
-              onChange={onChangeForm}
+              onChange={onChangeInput}
+              onBlur={onBlurCheckInput}
               placeholder="¿De qué se trata éste video?"
               hasError={formValuesCheck.descripcion}
           />
           <ButtonContainer>
             <CleanButton
-                  onClick={() => {
-                    clean()
-                  }}
-                  texto="LIMPIAR"/>
+                type="button"
+                onClick={() => resetForm()} texto="LIMPIAR"/>
             <SaveButton texto="GUARDAR"/>
           </ButtonContainer>
         </div>

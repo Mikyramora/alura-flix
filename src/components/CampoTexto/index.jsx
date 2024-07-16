@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import {useState} from "react";
 
 const Frame = styled.div`
     border: none;
@@ -23,26 +22,18 @@ const InteractuarTexto = styled.input`
     font-size: 20px;
 `
 
-const CampoTexto = ({hasError, titulo, ...props}) => {
-  const [isTouched, setIsTouched] = useState(false);
+const CampoTexto = ({hasError, titulo, ...props}) => (
+    <Frame>
+      <Label>{titulo}</Label>
+      <InteractuarTexto
+          className={hasError ? 'invalid' : 'valid'}
+          {...props}
+      />
+      <div>
+        {hasError ? <p className="error-message">Campo obligatorio</p> : <> </>}
+      </div>
+    </Frame>
+)
 
-  const handleBlur = () => {
-    setIsTouched(true);
-  };
-
-  const isInvalid = (isTouched && !props.value) || hasError
-
-  return <Frame>
-    <Label>{titulo}</Label>
-    <InteractuarTexto
-        onBlur={handleBlur}
-        className={isInvalid ? 'invalid' : 'valid'}
-        {...props}
-    />
-    <div>
-      {isInvalid ? <p className="error-message">Campo obligatorio</p> : <> </>}
-    </div>
-  </Frame>
-}
 
 export default CampoTexto

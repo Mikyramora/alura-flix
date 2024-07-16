@@ -3,6 +3,8 @@ import styled from "styled-components";
 import CampoTextoModal from "../CampoTextoModal/index.jsx";
 import OpcionesModal from "../OpcionesModal/index.jsx";
 import TextAModal from "../TextAModal/index.jsx";
+import {useState} from "react";
+import {constraints} from "../../res/utils.js";
 
 const Overlay = styled.div`
     position: fixed;
@@ -29,14 +31,14 @@ const DialogEstilizado = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (max-width:1420px){
-     width: 52vw;
-     height: 90vh;
+    @media (max-width: 1420px) {
+        width: 52vw;
+        height: 90vh;
     }
 
-    @media (max-width: 1040px){
-      width: 75vw;
-      height: 68.5vh;
+    @media (max-width: 1040px) {
+        width: 75vw;
+        height: 68.5vh;
     }
 `
 
@@ -46,8 +48,8 @@ const TituloModalEstilizado = styled.h2`
     border-style: solid none solid none;
     border-color: gold;
 
-    @media (max-width:1420px){
-     font-size: 40px;
+    @media (max-width: 1420px) {
+        font-size: 40px;
     }
 `
 const ContadorEstilizado = styled.div`
@@ -79,8 +81,8 @@ const BotonesContenedor = styled.div`
     justify-content: space-between;
     margin-top: 20px;
 
-    @media (max-width:1420px){
-     margin-top: 15px;
+    @media (max-width: 1420px) {
+        margin-top: 15px;
     }
 `;
 
@@ -99,71 +101,119 @@ const BotonEditar = styled.button`
         background-color: #45a049;
     }
 
-    @media (max-width:1420px){
-     font-size: 15px;
-     width: 9vw;
-     padding: 8px 0;
+    @media (max-width: 1420px) {
+        font-size: 15px;
+        width: 9vw;
+        padding: 8px 0;
     }
 
-    @media (max-width: 1040px){
-      width: 11vw;
+    @media (max-width: 1040px) {
+        width: 11vw;
     }
 `;
-
 
 
 const ModalEditar = () => {
   const {toggleModal, clean, closeModal, video, onChangeInput, onSubmitForm} = useAluraFlixContext()
 
+  const initialFormValuesCheck = {
+    titulo: false,
+    categoria: false,
+    imagenURL: false,
+    videoURL: false,
+    descripcion: false,
+  }
+
+  const [formValuesCheck, setFormValuesCheck] = useState(initialFormValuesCheck)
+  const resetForm = () => {
+    clean()
+    setFormValuesCheck(initialFormValuesCheck)
+  }
+
+  const checkFrom = () => {
+    const check = {}
+    Object.keys(video).forEach((key) => {
+      check[key] = constraints.isEmptyValue(video[key])
+    })
+    setFormValuesCheck(check)
+    return Object.values(check).every((value) => !value)
+  }
+
+  const onBlurCheckInput = (e) => {
+    const {name, value} = e.target
+    setFormValuesCheck({
+      ...formValuesCheck,
+      [name]: constraints.isEmptyValue(value)
+    })
+  }
+
+  const onSubmit = async (e) => {
+    e.preventDefault()
+    if (checkFrom()) {
+      await onSubmitForm(true)
+      resetForm()
+    }
+  }
 
   return toggleModal ? (<Overlay>
     <DialogEstilizado>
       <ContadorEstilizado>
-        <FormEstilizado onSubmit={(e) => {
-          e.preventDefault()
-          onSubmitForm(true)
-        }}>
+        <FormEstilizado onSubmit={onSubmit}>
           <TituloModalEstilizado>EDITAR CARD:</TituloModalEstilizado>
           <CampoTextoModal
               name="titulo"
               onChange={onChangeInput}
+              onBlur={onBlurCheckInput}
               titulo="Título"
               placeholder="Ingrese el título"
               value={video.titulo}
-              required
+              hasError={formValuesCheck.titulo}
           />
           <OpcionesModal
               name="categoria"
-              onChange={onChangeInput}
               value={video.categoria}
+              onChange={onChangeInput}
+              onBlur={onBlurCheckInput}
+              hasError={formValuesCheck.categoria}
           />
           <CampoTextoModal
               name="imagenURL"
-              onChange={onChangeInput}
               titulo="Imagen"
               placeholder="Ingrese el enlace de la imagen"
               value={video.imagenURL}
-              required
+              onChange={onChangeInput}
+              onBlur={onBlurCheckInput}
+              hasError={formValuesCheck.imagenURL}
           />
           <CampoTextoModal
               name="videoURL"
-              onChange={onChangeInput}
               titulo="Video"
               placeholder="Ingrese el enlace del video"
               value={video.videoURL}
-              required
+              onChange={onChangeInput}
+              onBlur={onBlurCheckInput}
+              hasError={formValuesCheck.videoURL}
           />
           <TextAModal
               name="descripcion"
-              onChange={onChangeInput}
               value={video.descripcion}
+              onChange={onChangeInput}
+              onBlur={onBlurCheckInput}
+              hasError={formValuesCheck.descripcion}
           />
-          <BotonCerrar onClick={() => {
-            closeModal()
-          }}>X
+          <BotonCerrar
+              type='button'
+              onClick={() => {
+                closeModal()
+                resetForm()
+              }}>X
           </BotonCerrar>
           <BotonesContenedor>
-            <BotonEditar onClick={() => clean()}>LIMPIAR</BotonEditar>
+            <BotonEditar
+                type='button'
+                onClick={() => resetForm()}>
+              LIMPIAR
+            </BotonEditar>
             <BotonEditar>GUARDAR</BotonEditar>
           </BotonesContenedor>
         </FormEstilizado>
