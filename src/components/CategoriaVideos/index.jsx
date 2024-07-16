@@ -42,7 +42,8 @@ const CategoriaEstilizada = styled.h1`
     }
 
     @media (max-width: 800px){
-      width: 200px;
+      width: 160px;
+      font-size: 19px;
     }
 `
 
