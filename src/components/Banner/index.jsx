@@ -156,6 +156,7 @@ const IframeEstilizado = styled.iframe`
     }
 
     @media (max-width: 800px){
+        margin-top: 10px;
         width: 84vw;
         height: 40vh;
     }
