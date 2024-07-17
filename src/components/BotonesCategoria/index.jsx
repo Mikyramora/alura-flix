@@ -11,7 +11,7 @@ const BotonesCategoriaStyled = styled.div`
     font-size: 13px;
 
     @media (max-width:1420px){
-     width: 27vw;
+     width: 45vw;
      height: 2.4vh;
     }
 

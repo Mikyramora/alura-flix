@@ -22,7 +22,7 @@ const Overlay = styled.div`
 const DialogEstilizado = styled.div`
     position: relative;
     width: 45%;
-    height: 87%;
+    height: 90%;
     margin: auto;
     background-color: #03122F;
     border-radius: 17px;
@@ -33,12 +33,12 @@ const DialogEstilizado = styled.div`
 
     @media (max-width: 1420px) {
         width: 52vw;
-        height: 90vh;
+        height: 80vh;
     }
 
     @media (max-width: 1040px) {
         width: 75vw;
-        height: 68.5vh;
+        height: 76vh;
     }
 
     @media (max-width: 700px){
@@ -97,7 +97,7 @@ const BotonesContenedor = styled.div`
     margin-top: 20px;
 
     @media (max-width: 1420px) {
-        margin-top: 15px;
+        margin: 15px 0;
     }
 `;
 

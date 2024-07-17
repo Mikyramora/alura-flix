@@ -8,19 +8,19 @@ const FigureEstilizada = styled.figure`
     align-items: center;
     justify-content: space-around;
     min-height: 40vh;
-    margin: 35px 41px;
+    margin: 35px 0 35px 41px;
     max-width: 100%;
 
     @media (max-width:1600px){
-     min-height: 30vh;
+     min-height: 41vh;
     }
 
     @media (max-width: 800px){
-        margin: 25px 80px;
+      margin: 25px 0 25px 80px;
     }
 
     @media (max-width: 600px){
-      margin: 30px 30px 30px 45px;
+      margin: 30px 0 30px 45px;
     }
 `
 
@@ -57,7 +57,7 @@ const ContainerVideosEstilizado = styled.div`
     scrollbar-width: thin;
 
     @media (max-width:1600px){
-     height: 33.5vh;
+     height: 35vh;
     }
 
     @media (max-width: 1350px){
@@ -73,12 +73,13 @@ const CardCategoria = styled.div`
     background-color: #0a082c;
     width: 22vw;
     height: 29vh;
-    margin-right: 50px;
+    margin-right: 53px;
     border-radius: 15px;
     
     @media (max-width:1600px){
      width: 54vw;
      height: 32.5vh;
+     margin-right: 40px;
     }
 
     @media (max-width: 1040px){

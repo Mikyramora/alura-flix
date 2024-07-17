@@ -23,14 +23,14 @@ const FigureEstilizada = styled.figure`
 
     @media (max-width: 800px){
         flex-direction: column;
-        max-height: 46vh;
+        max-height: 50vh;
     }
     
 `
 
 const ContainerBannerEstilizado = styled.div`
-    height: 25vh;
-    width: 42vw;
+    height: 36vh;
+    width: 41vw;
     
     @media (max-width:1600px){
         width: 46vw;
@@ -39,11 +39,11 @@ const ContainerBannerEstilizado = styled.div`
 
     @media (max-width: 1040px){
         width: 49vw;
-        height: 25vh;
+        height: 26.3vh;
     }
 
     @media (max-width: 800px){
-        height: 9vh;
+        height: 12vh;
         width: 85vw;
         margin-top: 10px;
     }
@@ -77,6 +77,7 @@ const CategoriaEstilizadaPrincipal = styled.h1`
         width: 180px;
         height: 23px;
         padding: 4px;
+        margin-bottom: 0;
     }
 `
 

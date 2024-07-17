@@ -37,13 +37,15 @@ const ButtonHeader = styled.button`
     }
 
     @media (max-width: 1040px){
-        width: 130px;
-        font-size: 15px;
+        width: 134px;
+        font-size: 13px;
     }
 
     @media (max-width: 700px){
-        width: 120px;
-        font-size: 13px;
+        width: 90px;
+        height: 34px;
+        font-size: 8px;
+        padding: 3px;
     }
 `
 
