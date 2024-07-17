@@ -59,14 +59,6 @@ const ContainerVideosEstilizado = styled.div`
     @media (max-width:1600px){
      height: 35vh;
     }
-
-    @media (max-width: 1350px){
-      
-    }
-
-    @media (max-width: 600px){
-      height: 35vh;
-    }
 `
 
 const CardCategoria = styled.div`
@@ -112,8 +104,8 @@ const ImgEstilizado = styled.img`
      height: 28vh;
     }
 
-    @media (max-width: 1350px){
-      width: 40vw;
+    @media (max-width: 1420px){
+      width: 45vw;
     }
 
     @media (max-width: 1040px){

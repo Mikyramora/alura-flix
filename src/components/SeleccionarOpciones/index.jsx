@@ -13,6 +13,10 @@ const Label = styled.label`
     font-weight: 600;
     display: block;
     margin-bottom: 5px;
+
+    @media (max-width:1420px){
+      font-size: 18px;
+    }
 `
 
 const Select = styled.select`
@@ -23,6 +27,15 @@ const Select = styled.select`
     border-radius: 10px;
     background-color: #143757;
     font-size: 20px;
+
+    @media (max-width:1600px){
+      width: 38vw;
+    }
+
+    @media (max-width:600px){
+      width: 73vw;
+    }
+    
 `
 
 const SeleccionarOpciones = ({hasError, ...props}) => {

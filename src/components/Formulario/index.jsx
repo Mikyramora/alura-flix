@@ -8,11 +8,33 @@ import {useAluraFlixContext} from "../../contex/AluraFlixContext.jsx";
 import {useEffect, useState} from "react";
 import {constraints} from "../../res/utils.js";
 
+const EncerrandoFilas = styled.div`
+  text-align: left;
+  @media (max-width:1600px){
+    width: 87vw;
+
+  }
+  
+  
+`
 const FilasFormulario = styled.figure`
     display: flex;
     flex-direction: row;
     width: 1350px;
     justify-content: space-around;
+
+  @media (max-width:1600px){
+    width: 80vw;
+  }
+
+
+
+  @media (max-width:600px){
+      flex-direction: column;
+      width: 75vw;
+      justify-content: left;
+      
+    }
 `
 
 const ButtonContainer = styled.div`
@@ -21,6 +43,12 @@ const ButtonContainer = styled.div`
     margin: 50px 64px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width:1600px){
+    width: 60vw;
+    }
+
+    
 `
 
 const Formulario = () => {
@@ -73,7 +101,7 @@ const Formulario = () => {
 
   return (
       <form onSubmit={onSubmit}>
-        <div>
+        <EncerrandoFilas>
           <FilasFormulario>
             <CampoTexto
                 titulo="Título"
@@ -127,7 +155,7 @@ const Formulario = () => {
                 onClick={() => resetForm()} texto="LIMPIAR"/>
             <SaveButton texto="GUARDAR"/>
           </ButtonContainer>
-        </div>
+        </EncerrandoFilas>
       </form>
   )
 }
